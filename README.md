@@ -45,3 +45,9 @@ Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000
 Compare experimental results with those expected Tmodel(N) from the mathematical modeling of the algorithm.
 
 All programmers will need to work together to generate the input (Random Permutation Arrays) for the sorting algorithms using the method given in Appendix 1 and store them in an array of size (N+1), starting from location 1 and ending at location N. Leave location (0) unused. Additionally, all programmers will need to provide an analysis of the results in comparison with those expected from the mathematical modeling of the algorithms.
+
+# Timeline (For All)
+
+By the end of Monday 10/4:
+Design the architecture, creating the UML diagrams, and creating class structure and header files.
+Implement the selection sort, insertion sort, merge sort, quick sort with the first element as the pivot, and randomized quick sort. Add counters to each algorithm to count the number of element comparisons.
