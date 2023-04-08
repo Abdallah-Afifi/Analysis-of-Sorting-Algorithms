@@ -1,5 +1,7 @@
 # Analysis-of-Sorting-Algorithms
 
+# Development Plan
+
 Define the project requirements: Read and understand the project requirements, the sorting algorithms that need to be implemented, and the method of verification.
 
 Design the system: Develop a plan for the software system. This includes designing the architecture, creating the UML diagrams, and creating class structure and header files.
@@ -17,3 +19,29 @@ Compare Experimental and Expected Results: Compare the experimental results with
 Analyze the Results: Provide an analysis of the results in comparison with those expected from the mathematical modeling of the algorithms. Use Tmodel(N) for the tested algorithms, given in Appendix 3.
 
 Develop the Final Report: Develop the final report of the project in the format provided. Include all UML diagrams, class structure and class header files, source code, and a small readme with your names, IDs, and sections you are registered in.
+
+# Objectives
+
+Abdallah:
+Implement Selection Sort algorithm and add counters to count the number of array element comparisons.
+Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Selection Sort.
+Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
+Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Quick Sort.
+Compare experimental results with those expected Tmodel(N) from the mathematical modeling of the algorithm.
+
+
+Hana:
+Implement Insertion Sort algorithm and add counters to count the number of array element comparisons.
+Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Insertion Sort.
+Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
+Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Quick Sort.
+Compare experimental results with those expected Tmodel(N) from the mathematical modeling of the algorithm.
+
+Adham:
+Implement Merge Sort algorithm and add counters to count the number of array element comparisons.
+Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Merge Sort.
+Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
+Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Quick Sort.
+Compare experimental results with those expected Tmodel(N) from the mathematical modeling of the algorithm.
+
+All programmers will need to work together to generate the input (Random Permutation Arrays) for the sorting algorithms using the method given in Appendix 1 and store them in an array of size (N+1), starting from location 1 and ending at location N. Leave location (0) unused. Additionally, all programmers will need to provide an analysis of the results in comparison with those expected from the mathematical modeling of the algorithms.
