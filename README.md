@@ -23,6 +23,7 @@ Develop the Final Report: Develop the final report of the project in the format 
 # Objectives
 
 Abdallah:
+
 Implement Selection Sort algorithm and add counters to count the number of array element comparisons.
 Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Selection Sort.
 Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
@@ -31,6 +32,7 @@ Compare experimental results with those expected Tmodel(N) from the mathematical
 
 
 Hana:
+
 Implement Insertion Sort algorithm and add counters to count the number of array element comparisons.
 Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Insertion Sort.
 Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
@@ -38,6 +40,7 @@ Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000
 Compare experimental results with those expected Tmodel(N) from the mathematical modeling of the algorithm.
 
 Adham:
+
 Implement Merge Sort algorithm and add counters to count the number of array element comparisons.
 Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Merge Sort.
 Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
@@ -49,5 +52,6 @@ All programmers will need to work together to generate the input (Random Permuta
 # Timeline (For All)
 
 By the end of Monday 10/4:
+
 Design the architecture, creating the UML diagrams, and creating class structure and header files.
 Implement the selection sort, insertion sort, merge sort, quick sort with the first element as the pivot, and randomized quick sort. Add counters to each algorithm to count the number of element comparisons.
