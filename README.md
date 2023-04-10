@@ -20,6 +20,14 @@ Analyze the Results: Provide an analysis of the results in comparison with those
 
 Develop the Final Report: Develop the final report of the project in the format provided. Include all UML diagrams, class structure and class header files, source code, and a small readme with your names, IDs, and sections you are registered in.
 
+Milestone #1 (April 24th): Deliver all UML diagrams, class structure and class header
+files for your project, as well as a small readme with your names, IDs, and sections you are
+registered in.
+
+Milestone #2 (May 13th): You are to deliver a final report of the
+project as in the attached format, as well as all source code.
+
+
 # Objectives
 
 Abdallah:
