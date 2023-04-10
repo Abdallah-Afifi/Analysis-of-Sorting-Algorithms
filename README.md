@@ -40,7 +40,7 @@ Compare experimental results with those expected Tmodel(N) from the mathematical
 
 
 Hana:
-
+Abstract Sort class with all the basic functions.
 Implement Insertion Sort algorithm and add counters to count the number of array element comparisons.
 Conduct experiments to find Texp(N) for each of the 6 array sizes N = 1000, 2000, 3000, 5000, 7000, 10000 for Insertion Sort.
 Implement Quick Sort algorithm and add counters to count the number of array element comparisons.
