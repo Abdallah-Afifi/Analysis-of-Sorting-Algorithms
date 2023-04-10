@@ -35,6 +35,6 @@ public:
 		}
 		cout << endl;
 	}
-	int virtual sort(int n, int arr) = 0;
+	int virtual sort() = 0;
 };
 
