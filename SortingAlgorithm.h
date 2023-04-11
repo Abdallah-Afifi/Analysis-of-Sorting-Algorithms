@@ -10,7 +10,7 @@ protected:
   int swaps;
 
 void virtual sort () = 0;
- //void virtual print();
+
 }
 
 #endif //SORTINGALGORITHM_H
