@@ -1,7 +1,7 @@
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
 
-Class InsertionSort : public SortingAlgorithm {
+Class InsertionSort : private SortingAlgorithm {
 private: 
 
 void sort ();
