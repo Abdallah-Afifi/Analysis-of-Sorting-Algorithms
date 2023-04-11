@@ -1,7 +1,7 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
-Class SelectionSort : public SortingAlgorithm {
+Class SelectionSort : private SortingAlgorithm {
 private: 
 
 void sort ();
