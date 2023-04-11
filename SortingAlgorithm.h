@@ -2,6 +2,7 @@
 #define SORTINGALGORITHM_H
 
 #include <string>
+#include <algorithm>
 
 Class SortingAlgorithm {
 protected: 
@@ -11,6 +12,7 @@ protected:
 
 void virtual sort () = 0;
 
+bool is_sorted ();
 }
 
 #endif //SORTINGALGORITHM_H
