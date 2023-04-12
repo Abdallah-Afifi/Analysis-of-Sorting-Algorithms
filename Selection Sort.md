@@ -11,9 +11,13 @@ The algorithm has a time complexity of O(n^2), making it inefficient for large d
 The algorithm works as follows:
 
 Set the first element of the array as the minimum element.
+
 Find the minimum element in the unsorted subarray.
+
 Swap the minimum element with the first element of the unsorted subarray.
+
 Increment the size of the sorted subarray by one.
+
 Repeat steps 2-4 until the unsorted subarray is empty.
 
 # Conclusion
