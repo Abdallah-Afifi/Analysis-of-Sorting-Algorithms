@@ -2,7 +2,7 @@
 
 Random Permutation Arrays (RPAs) are an important concept in computer science and mathematics. They are used in a wide range of applications, including cryptography, simulation and modeling, and random sampling. In this section, we will explore the concept of RPAs in detail, including how they are defined, how they are generated, and some of their important properties.
 
-Definition
+# Definition
 
 A Random Permutation Array (RPA) is an array that contains a random permutation of a set of elements. Specifically, an RPA of size n is an array that contains all the integers from 1 to n in a random order, with no integer missing and no integer duplicated.
 
@@ -12,7 +12,7 @@ Copy code
 {4, 1, 5, 2, 3}
 Note that this array contains all the integers from 1 to 5 in a random order, with no integer missing and no integer duplicated.
 
-Generation
+# Generation
 
 To generate an RPA, we typically start by creating an array containing the integers from 1 to n, and then shuffle the array to create a random permutation. There are many different algorithms that can be used to shuffle an array, ranging from simple ones like the Fisher-Yates shuffle to more complex ones that use cryptographic techniques.
 
@@ -74,7 +74,7 @@ int main() {
 }
 The generateRPA() function takes an integer n as input and creates a vector containing the first n integers. It then shuffles the vector using the Fisher-Yates shuffle to create a random permutation and returns the resulting RPA. The main() function demonstrates how to use the generateRPA() function to generate an RPA for the first 10 integers and print the resulting array.
                           
- Properties
+# Properties
 
 One important property of RPAs is that each possible permutation of the integers from 1 to n is equally likely to occur in the resulting array. This means that if we generate a large number of RPAs, we can expect each possible permutation to occur with roughly the same frequency. This property makes RPAs useful for a variety of applications where randomness and unpredictability are important.
 
@@ -82,7 +82,7 @@ Another important property of RPAs is that they can be used to generate random s
 
 In addition, RPAs can be used in cryptographic applications as a source of randomness. Since RPAs are unpredictable and each possible permutation is equally likely to occur, they can be used to generate secret keys or as a component of encryption algorithms.
 
-Conclusion
+# Conclusion
 
 Random Permutation Arrays (RPAs) are an important concept in computer science and mathematics. They are used in a wide range of applications, including cryptography, simulation and modeling, and random sampling. RPAs are defined as arrays that contain a random permutation of a set of elements, and can be generated using a variety of algorithms, including the Fisher-Yates shuffle. RPAs have several important properties, including the fact that each possible permutation is equally likely to occur, making them useful for generating random samples and as a source of randomness in cryptographic applications.
                           
