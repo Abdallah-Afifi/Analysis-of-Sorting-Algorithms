@@ -51,10 +51,8 @@ std::vector<int> generateRPA(int n) {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    
     return arr;
 }
-
 int main() {
     // Generate a random permutation array for the first 10 integers
     std::vector<int> rpa = generateRPA(10);
@@ -64,7 +62,6 @@ int main() {
         std::cout << rpa[i] << " ";
     }
     std::cout << std::endl;
-    
     return 0;
 }
 
