@@ -27,7 +27,9 @@ The above algorithm is a variant of the Fisher-Yates shuffle, which is a simple 
                           
 # Properties
 
-One important property of RPAs is that each possible permutation of the integers from 1 to n is equally likely to occur in the resulting array. This means that if we generate a large number of RPAs, we can expect each possible permutation to occur with roughly the same frequency. This property makes RPAs useful for a variety of applications where randomness and unpredictability are important.
+One important property of RPAs is that each possible permutation of the integers from 1 to n is equally likely to occur in the resulting array. 
+This means that if we generate a large number of RPAs, we can expect each possible permutation to occur with roughly the same frequency.
+This property makes RPAs useful for a variety of applications where randomness and unpredictability are important.
 
 Another important property of RPAs is that they can be used to generate random samples from a population. To generate a random sample of size k from a population of size n, we can generate an RPA of size n and take the first k elements of the array as the sample. Since each possible permutation of the integers from 1 to n is equally likely to occur in the RPA, each possible sample of size k is also equally likely to occur.
 
@@ -37,3 +39,6 @@ In addition, RPAs can be used in cryptographic applications as a source of rando
 
 Random Permutation Arrays (RPAs) are an important concept in computer science and mathematics. They are used in a wide range of applications, including cryptography, simulation and modeling, and random sampling. RPAs are defined as arrays that contain a random permutation of a set of elements, and can be generated using a variety of algorithms, including the Fisher-Yates shuffle. RPAs have several important properties, including the fact that each possible permutation is equally likely to occur, making them useful for generating random samples and as a source of randomness in cryptographic applications.
                           
+# Refrence 
+
+https://www.geeksforgeeks.org/generate-a-random-permutation-of-1-to-n/
