@@ -8,7 +8,6 @@ A Random Permutation Array (RPA) is an array that contains a random permutation 
 
 For example, the following is an RPA of size 5:
 
-Copy code
 {4, 1, 5, 2, 3}
 Note that this array contains all the integers from 1 to 5 in a random order, with no integer missing and no integer duplicated.
 
@@ -18,8 +17,6 @@ To generate an RPA, we typically start by creating an array containing the integ
 
 One simple algorithm for generating an RPA is as follows:
 
-php
-Copy code
 1. Create an array containing the integers from 1 to n.
 2. For i from n-1 down to 1, do the following:
    a. Generate a random integer j between 0 and i.
@@ -29,8 +26,6 @@ The above algorithm is a variant of the Fisher-Yates shuffle, which is a simple 
 
 Here is an implementation of the above algorithm in C++:
 
-c
-Copy code
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -72,6 +67,7 @@ int main() {
     
     return 0;
 }
+
 The generateRPA() function takes an integer n as input and creates a vector containing the first n integers. It then shuffles the vector using the Fisher-Yates shuffle to create a random permutation and returns the resulting RPA. The main() function demonstrates how to use the generateRPA() function to generate an RPA for the first 10 integers and print the resulting array.
                           
 # Properties
