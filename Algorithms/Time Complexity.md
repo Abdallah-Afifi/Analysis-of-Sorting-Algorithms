@@ -46,3 +46,7 @@ Time complexity is an important concept in computer science that measures the ef
 It is expressed using big O notation, which provides an upper bound on the growth rate of an algorithm's time complexity. 
 The best-case, worst-case, and average-case time complexity of an algorithm should also be considered when analyzing the efficiency of an algorithm. 
 In C++, time complexity can be calculated using various techniques such as measuring the number of basic operations or using the built-in clock function to measure execution time.
+
+# Reference 
+
+https://www.geeksforgeeks.org/understanding-time-complexity-simple-examples/
