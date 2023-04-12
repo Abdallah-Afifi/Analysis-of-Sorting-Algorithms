@@ -24,10 +24,6 @@ One simple algorithm for generating an RPA is as follows:
 3. Return the resulting array as the RPA.
 The above algorithm is a variant of the Fisher-Yates shuffle, which is a simple and efficient algorithm for shuffling an array.
 
-
-
-
-The generateRPA() function takes an integer n as input and creates a vector containing the first n integers. It then shuffles the vector using the Fisher-Yates shuffle to create a random permutation and returns the resulting RPA. The main() function demonstrates how to use the generateRPA() function to generate an RPA for the first 10 integers and print the resulting array.
                           
 # Properties
 
