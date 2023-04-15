@@ -3,14 +3,26 @@ Heap Sort is a comparison-based sorting algorithm that uses a binary heap data s
 It is an in-place sorting algorithm, which means that it doesn't require additional memory for sorting, and 
 it has a time complexity of O(n log n) for the worst, average, and best cases, making it efficient for large datasets.
 
+Binary Heap
+
+A binary (max) heap is a complete binary tree in which the value of each parent node is greater than or equal to the value of its child nodes. This is known as the heap property. A binary heap can be represented using an array, where the parent node of element i is located at index (i-1)/2, and its left and right child nodes are located at indices 2i+1 and 2i+2, respectively.
+ In a min-heap, each parent node has a value less than or equal to its children.
+
+
 The algorithm works in two main phases:
 
-   1.  Build a binary max-heap (or min-heap) from the input array, where the highest (or lowest) value is at the root node. 
-    A binary max-heap is a complete binary tree where each parent node has a value greater than or equal to its children. 
-    In a min-heap, each parent node has a value less than or equal to its children.
-
+   1.  Build a binary max-heap (or min-heap) from the input array, where the highest (or lowest) value is at the root node (the end of the sorted array)
+   This part takes O(n) time, following the below steps:
+      a. Starting from the last parent node (i.e., the parent node of the last element), heapify down the node until it satisfies the heap property.
+      b. Repeat step a for all parent nodes, working backwards from the last parent node to the root.
+    
    2.  Repeatedly extract the maximum (or minimum) element from the heap, swap it with the last element in the remaining 
-      unsorted portion of the array, and then adjust the heap structure to maintain the max-heap (or min-heap) property.
+      unsorted portion of the array, and then adjust the heap structure to maintain the max-heap (or min-heap) property. 
+      This part can be done in O(n*logn) time by following these steps:
+         a.Swap the root node (which contains the maximum element) with the last element of the heap.
+         b. Remove the last element (which now contains the maximum element) from the heap.
+         c. Heapify down the root node until it satisfies the heap property.
+         d. Repeat steps a-c until all elements have been extracted and placed in the sorted array.
 
 Here is an outline of the Heap Sort algorithm:
 
