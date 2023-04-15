@@ -10,12 +10,25 @@ class SortingAlgorithm {
 public:
     string Name;
     int Comparisons;
+    int Swaps;
 
     SortingAlgorithm(string name) {
         Name = name;
         Comparisons = 0;
+        Swaps = 0;
     }
-
+    
+   int GetComparisons() {
+       
+       return Comparisons;
+       
+   }
+    
+    int GetSwaps() {
+       
+       return Swaps;
+       
+   }
     virtual void Sort(vector<int>& arr) = 0;
 };
 
@@ -34,6 +47,7 @@ public:
                 Comparisons++;
             }
             swap(arr[i], arr[minIdx]);
+            Swaps++;
         }
     }
 };
@@ -51,6 +65,7 @@ public:
                 arr[j + 1] = arr[j];
                 j--;
                 Comparisons++;
+                Swaps++;
             }
             arr[j + 1] = key;
         }
@@ -94,6 +109,7 @@ private:
                 arr[k++] = L[i++];
             } else {
                 arr[k++] = R[j++];
+                Swaps++;
             }
             Comparisons++;
         }
@@ -186,8 +202,9 @@ public:
             auto end_time = std::chrono::high_resolution_clock::now();
 
             std::chrono::duration<double, std::milli> elapsed_time = end_time - start_time;
-            std::cout << "Size " << n << ": " << algorithm->GetComparisons() << " comparisons, " 
-                << elapsed_time.count() << " ms elapsed" << std::endl;
+            std::cout << "Size " << n << ": " << algorithm->GetComparisons() << " comparisons, "
+                      << algorithm->GetSwaps() << " swaps, " << elapsed_time.count() << " ms elapsed" 
+                      << std::endl;
 
             delete[] arr;
         }
