@@ -1,3 +1,4 @@
+# Heap Sort
 Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort elements in an array. 
 It is an in-place sorting algorithm, which means that it doesn't require additional memory for sorting, and 
 it has a time complexity of O(n log n) for the worst, average, and best cases, making it efficient for large datasets.
