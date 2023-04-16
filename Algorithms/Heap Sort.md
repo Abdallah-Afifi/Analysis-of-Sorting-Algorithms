@@ -16,7 +16,9 @@ In a min-heap, each parent node has a value less than or equal to its children, 
 
 
  # Heapify Function
-Heap Sort uses a "heapify" operation, which is an essential part of the algorithm. 
+Heap Sort uses a "heapify" operation, which is an essential part of the algorithm. It ensures
+that every parent node has children that are less than it in the max-heap case, and children
+that are greater than it in the min-heap case by working recursively starting from the last parent node.
 The heapify operation takes O(log n) time, where n is the number of elements in the heap. 
 Since heapify is called n times in the worst case, the overall time complexity of the algorithm is O(n log n).
 
