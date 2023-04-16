@@ -278,3 +278,44 @@ void quick_sort(int arr[], int low, int high)
         quick_sort(arr, pivot + 1, high);
     }
 }
+
+//Heap Sort
+
+//Function heapify builds a max binary heap tree from a given array
+void heapify(int arr[], int size, int index)
+{
+    int leftChild = 2*index+1; //left child
+    int rightChild = 2*index+2; //right child
+    int max = index;   //root
+ 
+    //root takes value of max child node
+    //To create a binary min-heap tree, switch the logical operators in the
+    // if statement comparison between the child and the max element
+    // to the less than operator (<)
+    if (leftChild < size && arr[leftChild] > arr[max])
+        max = leftChild; 
+    if (rightChild < size && arr[rightChild] > arr[max])
+        max = rightChild;
+    //perform swap if root value has changed
+    if (max != index){
+        swap(arr[index], arr[max]);
+        heapify(arr, size, max); //recursive heapify call to complete sub-tree with new root 
+    }
+    
+    //Function buildHeap heapifies every level of tree
+    void buildHeap(int arr[], int size)
+    {
+        for (int index = size / 2 -1; index>=0; index--)
+            heapify(arr, size, index);
+    }
+    //Sorting function
+    void heapSort (int arr[], int size)
+    {
+        buildHeap(arr, size);
+        for (int index = size-1; index >= 0; i--)
+        {
+            swap(arr[0], arr[index]);
+            heapify(arr, index, 0);
+        }
+    }
+        
