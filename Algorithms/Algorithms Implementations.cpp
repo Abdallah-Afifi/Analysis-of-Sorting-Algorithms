@@ -25,7 +25,7 @@ public override void Sort(int[] array)
     
     // Selection Sort
 
-void selectionSort(int arr[], int n)
+override void Sort(int arr[], int n)
 {
     int i, j, min_idx;
     // One by one move boundary of
@@ -111,7 +111,7 @@ void merge(int array[], int const left, int const mid,
 // begin is for left index and end is
 // right index of the sub-array
 // of arr to be sorted */
-void mergeSort(int array[], int const begin, int const end)
+override void Sort(int array[], int const begin, int const end)
 {
     if (begin >= end)
         return; // Returns recursively
@@ -148,7 +148,7 @@ int partition(int arr[], int low, int high)
 arr[] --> Array to be sorted,
 low --> Starting index,
 high --> Ending index */
-void quickSort(int arr[], int low, int high)
+override void Sort(int arr[], int low, int high)
 {
     // If low is lesser than high
     if (low < high) {
