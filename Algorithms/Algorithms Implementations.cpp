@@ -297,25 +297,27 @@ void heapify(int arr[], int size, int index)
     if (rightChild < size && arr[rightChild] > arr[max])
         max = rightChild;
     //perform swap if root value has changed
-    if (max != index){
+    if (max != index) {
         swap(arr[index], arr[max]);
         heapify(arr, size, max); //recursive heapify call to complete sub-tree with new root 
     }
     
     //Function buildHeap heapifies every level of tree
+    //Heapification starts from the lowest level of the tree, working upwards
     void buildHeap(int arr[], int size)
     {
-        for (int index = size / 2 -1; index>=0; index--)
+        for (int index = size / 2 - 1; index >= 0; index--)
             heapify(arr, size, index);
     }
-    //Sorting function
+    //Main sorting function
     override void Sort (int arr[], int size)
     {
         buildHeap(arr, size);
         for (int index = size-1; index >= 0; i--)
         {
             swap(arr[0], arr[index]);
-            heapify(arr, index, 0);
+            heapify(arr, index, 0); //to ensure max/min heap conditions
+                                    // remain satisfied after each swap
         }
     }
         
