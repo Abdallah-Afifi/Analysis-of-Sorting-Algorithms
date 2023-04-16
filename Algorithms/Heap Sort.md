@@ -5,7 +5,7 @@ it has a time complexity of O(n log n) for the worst, average, and best cases, m
 
 # Binary Heap
 
-A binary tree does NOT follow the rules of a binary search tree, where the left child of the parent node must be less than or equal to the parent node 
+A binary heap (max/min) tree does NOT follow the rules of a binary search tree, where the left child of the parent node must be less than or equal to the parent node 
 and the right child must be greater than the parent node.
 A binary max-heap is a complete binary tree in which the value of each parent node is greater than or equal to the value of its child nodes. A max-heap implementation is used to sort elements in an ascending order. A complete binary tree may or may not have  an incomplete lower level of nodes, however they must be filled from left to right with no empty spots in the middle. This is known as the heap property. A binary heap can be represented using an array, where the element i ia a parent node, and its left and right child nodes are located at indices 2i+1 and 2i+2, respectively. To find the parent node (i1) of an element located at index i, i1=i/2-1.
 if the index of the first array element is 1 not 0, the formulae are:
