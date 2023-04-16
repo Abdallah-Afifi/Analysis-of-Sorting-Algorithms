@@ -5,9 +5,16 @@ it has a time complexity of O(n log n) for the worst, average, and best cases, m
 
 # Binary Heap
 
-A binary (max) heap is a complete binary tree in which the value of each parent node is greater than or equal to the value of its child nodes. This is known as the heap property. A binary heap can be represented using an array, where the parent node of element i is located at index (i-1)/2, and its left and right child nodes are located at indices 2i+1 and 2i+2, respectively.
-In a min-heap, each parent node has a value less than or equal to its children.
- 
+A binary tree does NOT follow the rules of a binary search tree, where the left child of the parent node must be less than or equal to the parent node 
+and the right child must be greater than the parent node.
+A binary max-heap is a complete binary tree in which the value of each parent node is greater than or equal to the value of its child nodes. A max-heap implementation is used to sort elements in an ascending order. A complete binary tree may or may not have  an incomplete lower level of nodes, however they must be filled from left to right with no empty spots in the middle. This is known as the heap property. A binary heap can be represented using an array, where the element i ia a parent node, and its left and right child nodes are located at indices 2i+1 and 2i+2, respectively. To find the parent node (i1) of an element located at index i, i1=i/2-1.
+if the index of the first array element is 1 not 0, the formulae are:
+(left child) int l=2i;
+(right child) int r=2i+1;
+(parent node) int i1= i/2;
+In a min-heap, each parent node has a value less than or equal to its children, this version is used to sort in a descending order.
+
+
  # Heapify Function
 Heap Sort uses a "heapify" operation, which is an essential part of the algorithm. 
 The heapify operation takes O(log n) time, where n is the number of elements in the heap. 
@@ -19,7 +26,7 @@ Heap sort can be implemented in-place or out-of-place. In an in-place implementa
 # Algorithm
 
    1.  Build a binary max-heap (or min-heap) from the input array, where the highest (or lowest) value is at the root node (the end of the sorted array)
-   This part takes O(n) time, following the below steps:
+   This part takes O(n) time, following the steps below:
       a. Starting from the last parent node (i.e., the parent node of the last element), heapify down the node until it satisfies the heap property.
       b. Repeat step a for all parent nodes, working backwards from the last parent node to the root.
     
