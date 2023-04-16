@@ -309,7 +309,7 @@ void heapify(int arr[], int size, int index)
             heapify(arr, size, index);
     }
     //Sorting function
-    void heapSort (int arr[], int size)
+    override void Sort (int arr[], int size)
     {
         buildHeap(arr, size);
         for (int index = size-1; index >= 0; i--)
