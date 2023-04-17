@@ -353,21 +353,19 @@ private:
 
 
 
-
-
-
-
-class RandomPermutationArrayGenerator {
+class RandomPermutationVectorGenerator {
 public:
-    static int* GenerateArray(int n) {
-        int* arr = new int[n];
+    static std::vector<int> GenerateVector(int n) {
+        std::vector<int> vec(n);
         for (int i = 0; i < n; i++) {
-            arr[i] = i + 1;
+            vec[i] = i + 1;
         }
-        std::shuffle(arr, arr + n, std::mt19937(std::random_device()()));
-        return arr;
+        std::shuffle(vec.begin(), vec.end(), std::mt19937(std::random_device()()));
+        return vec;
     }
 };
+
+
 
 class SortTester {
 public:
@@ -377,10 +375,10 @@ public:
 
         for (int i = 0; i < num_sizes; i++) {
             int n = sizes[i];
-            int* arr = RandomPermutationArrayGenerator::GenerateArray(n);
+            int* vec = RandomPermutationArrayGenerator::GenerateArray(n);
 
             auto start_time = std::chrono::high_resolution_clock::now();
-            algorithm->Sort(arr, n);
+            algorithm->Sort(vec, n);
             auto end_time = std::chrono::high_resolution_clock::now();
 
             std::chrono::duration<double, std::milli> elapsed_time = end_time - start_time;
@@ -388,7 +386,7 @@ public:
                       << algorithm->GetSwaps() << " swaps, " << elapsed_time.count() << " ms elapsed" 
                       << std::endl;
 
-            delete[] arr;
+            delete[] vec;
         }
     }
 };
@@ -419,47 +417,47 @@ int main() {
 
     // Test each sorting algorithm with various array sizes
     for (int i = 0; i < numTests; i++) {
-        int arraySize = testSizes[i];
-        int* array = arrayGenerator.GenerateArray(arraySize);
+        int vectorSize = testSizes[i];
+        int* vector = arrayGenerator.GenerateArray(vectorSize);
 
-        std::cout << "Testing bubble sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(bubbleSort, array, arraySize);
+        std::cout << "Testing bubble sort with array size " << vectorSize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(bubbleSort, vector, vectorSize);
 
-        std::cout << "Testing counting sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(countingSort, array, arraySize);
+        std::cout << "Testing counting sort with array size " << vectorSize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(countingSort, vector, vectorSize);
 
-        std::cout << "Testing heap sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(heapSort, array, arraySize);
+        std::cout << "Testing heap sort with array size " << vectorSize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(heapSort, vector, vectorSize);
 
-        std::cout << "Testing insertion sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(insertionSort, array, arraySize);
+        std::cout << "Testing insertion sort with array size " << vectorSize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(insertionSort, vector, vectorSize);
 
-        std::cout << "Testing merge sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(mergeSort, array, arraySize);
+        std::cout << "Testing merge sort with array size " << vectorSize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(mergeSort, vector, vectorSize);
 
-        std::cout << "Testing quick sort (first element pivot) with array size " << arraySize << "..." << std::endl;
+        std::cout << "Testing quick sort (first element pivot) with array size " << vectorSize << "..." << std::endl;
         quickSort.SetPivotChoice(QuickSort::PivotChoice::FIRST_ELEMENT);
-        sortTester.TestSortingAlgorithm(quickSort, array, arraySize);
+        sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
 
-        std::cout << "Testing quick sort (random element pivot) with array size " << arraySize << "..." << std::endl;
+        std::cout << "Testing quick sort (random element pivot) with array size " << vectorSize << "..." << std::endl;
         quickSort.SetPivotChoice(QuickSort::PivotChoice::RANDOM_ELEMENT);
-        sortTester.TestSortingAlgorithm(quickSort, array, arraySize);
+        sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
 
-        std::cout << "Testing quick sort (median-of-three pivot) with array size " << arraySize << "..." << std::endl;
+        std::cout << "Testing quick sort (median-of-three pivot) with array size " << vectorSize << "..." << std::endl;
         quickSort.SetPivotChoice(QuickSort::PivotChoice::MEDIAN_OF_THREE);
-        sortTester.TestSortingAlgorithm(quickSort, array, arraySize);
+        sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
 
-        std::cout << "Testing selection sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(selectionSort, array, arraySize);
+        std::cout << "Testing selection sort with array size " << vectorSize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(selectionSort, vector, vectorSize);
 
         std::cout << "Testing shell sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(shellSort, array, arraySize);
+        sortTester.TestSortingAlgorithm(shellSort, vector, vectorSize);
 
         std::cout << "Testing tree sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(treesort, array, arraySize);
+        sortTester.TestSortingAlgorithm(treesort, vector, vectorSize);
 
 
-        delete[] array;
+        delete[] vector;
     }
 
     return 0;
