@@ -194,6 +194,155 @@ private:
 };
 
 
+class BubbleSort : public SortingAlgorithm {
+public:
+    void Sort(std::vector<int>& arr) override {
+        int n = arr.size();
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                Comparisons++;
+                if (arr[j] > arr[j+1]) {
+                    Swap(arr, j, j+1);
+                }
+            }
+        }
+    }
+
+
+private:
+    void Swap(std::vector<int>& arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        Swaps++;
+    }
+};
+
+
+class HeapSort : public SortingAlgorithm {
+public:
+    void Sort(std::vector<int>& arr) override {
+        int n = arr.size();
+        BuildMaxHeap(arr, n);
+        for (int i = n - 1; i >= 1; i--) {
+            Swap(arr, 0, i);
+            Heapify(arr, 0, i);
+        }
+    }
+
+
+private:
+    void BuildMaxHeap(std::vector<int>& arr, int n) {
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            Heapify(arr, i, n);
+        }
+    }
+
+    void Heapify(std::vector<int>& arr, int i, int n) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        Comparisons++;
+        if (left < n && arr[left] > arr[largest]) {
+            largest = left;
+        }
+
+        Comparisons++;
+        if (right < n && arr[right] > arr[largest]) {
+            largest = right;
+        }
+
+        if (largest != i) {
+            Swap(arr, i, largest);
+            Heapify(arr, largest, n);
+        }
+    }
+
+    void Swap(std::vector<int>& arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        Swaps++;
+    }
+};
+
+
+class ShellSort : public SortingAlgorithm {
+public:
+    void Sort(std::vector<int>& arr) override {
+        int n = arr.size();
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; i++) {
+                int temp = arr[i];
+                int j;
+                for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+                    arr[j] = arr[j - gap];
+                    Comparisons++;
+                    Swaps++;
+                }
+                arr[j] = temp;
+                Swaps++;
+            }
+        }
+    }
+};
+
+
+
+
+class TreeSort : public SortingAlgorithm {
+public:
+    void Sort(std::vector<int>& arr) override {
+        Node* root = nullptr;
+        for (int num : arr) {
+            root = Insert(root, num);
+        }
+        TraverseInOrder(root, arr);
+    }
+
+    int Comparisons = 0;
+    int Swaps = 0;
+
+private:
+    struct Node {
+        int val;
+        Node* left;
+        Node* right;
+
+        Node(int v) : val(v), left(nullptr), right(nullptr) {}
+    };
+
+    Node* Insert(Node* root, int num) {
+        if (!root) {
+            return new Node(num);
+        }
+
+        Comparisons++;
+        if (num < root->val) {
+            root->left = Insert(root->left, num);
+        } else {
+            root->right = Insert(root->right, num);
+        }
+
+        return root;
+    }
+
+    void TraverseInOrder(Node* root, std::vector<int>& arr) {
+        if (!root) {
+            return;
+        }
+        TraverseInOrder(root->left, arr);
+        arr.push_back(root->val);
+        TraverseInOrder(root->right, arr);
+    }
+};
+
+
+
+
+
+
 
 
 class RandomPermutationArrayGenerator {
