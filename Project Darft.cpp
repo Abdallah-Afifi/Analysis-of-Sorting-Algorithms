@@ -19,16 +19,17 @@
 using namespace std;
 
 class SortingAlgorithm {
-public:
-    string Name;
-    int Comparisons;
-    int Swaps;
 
-    SortingAlgorithm(string name) {
+public: 
+
+  SortingAlgorithm(string name) {
         Name = name;
         Comparisons = 0;
         Swaps = 0;
     }
+
+ virtual void Sort(vector<int>& arr) = 0;
+};
     
    int GetComparisons() {
        
@@ -41,12 +42,17 @@ public:
        return Swaps;
        
    }
-    virtual void Sort(vector<int>& arr) = 0;
-};
+
+protected:
+    string Name;
+    int Comparisons;
+    int Swaps;
+
+   
 
 class SelectionSort : public SortingAlgorithm {
 public:
-    SelectionSort() : SortingAlgorithm("Selection Sort") {}
+    SelectionSort() : SortingAlgorithm("Selection Sort") {} 
 
     void Sort(vector<int>& arr) {
         int n = arr.size();
@@ -214,13 +220,14 @@ public:
             for (int j = 0; j < n-i-1; j++) {
                 Comparisons++;
                 if (arr[j] > arr[j+1]) {
-                    Swap(arr, j, j+1);
+                    swap(arr[j], arr[j+1]);
+                    Swaps++;
                 }
             }
         }
     }
 
-
+/*
 private:
     void Swap(std::vector<int>& arr, int i, int j) {
         int temp = arr[i];
@@ -229,7 +236,7 @@ private:
         Swaps++;
     }
 };
-
+*/
 
 class HeapSort : public SortingAlgorithm {
 public:
@@ -237,7 +244,8 @@ public:
         int n = arr.size();
         BuildMaxHeap(arr, n);
         for (int i = n - 1; i >= 1; i--) {
-            Swap(arr, 0, i);
+            swap(arr[0], arr[i]);
+            Swaps++;
             Heapify(arr, 0, i);
         }
     }
@@ -266,11 +274,12 @@ private:
         }
 
         if (largest != i) {
-            Swap(arr, i, largest);
+            swap(arr[i], arr[largest]);
+            Swaps++;
             Heapify(arr, largest, n);
         }
     }
-
+/*
     void Swap(std::vector<int>& arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
@@ -278,7 +287,7 @@ private:
         Swaps++;
     }
 };
-
+*/
 
 class ShellSort : public SortingAlgorithm {
 public:
@@ -436,15 +445,15 @@ int main() {
         sortTester.TestSortingAlgorithm(mergeSort, vector, vectorSize);
 
         std::cout << "Testing quick sort (first element pivot) with array size " << vectorSize << "..." << std::endl;
-        quickSort.SetPivotChoice(QuickSort::PivotChoice::FIRST_ELEMENT);
+        quickSort.ChoosePivot(QuickSort::PivotChoice::FIRST_ELEMENT);
         sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
 
         std::cout << "Testing quick sort (random element pivot) with array size " << vectorSize << "..." << std::endl;
-        quickSort.SetPivotChoice(QuickSort::PivotChoice::RANDOM_ELEMENT);
+        quickSort.ChoosePivot(QuickSort::PivotChoice::RANDOM_ELEMENT);
         sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
 
         std::cout << "Testing quick sort (median-of-three pivot) with array size " << vectorSize << "..." << std::endl;
-        quickSort.SetPivotChoice(QuickSort::PivotChoice::MEDIAN_OF_THREE);
+        quickSort.ChoosePivot(QuickSort::PivotChoice::MEDIAN_OF_THREE);
         sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
 
         std::cout << "Testing selection sort with array size " << vectorSize << "..." << std::endl;
