@@ -28,8 +28,7 @@ public:
         Swaps = 0;
     }
 
- virtual void Sort(vector<int>& arr) = 0;
-};
+ virtual void Sort(vector<int>& arr) = 0; 
     
    int GetComparisons() {
        
@@ -48,6 +47,9 @@ protected:
     int Comparisons;
     int Swaps;
 
+
+
+};
    
 
 class SelectionSort : public SortingAlgorithm {
@@ -147,7 +149,7 @@ public:
 
     PivotChoice Pivot;
 
-    void Sort(std::vector<int>& arr) override {
+    void Sort(std::vector<int>& arr) {
         int size = arr.size();
         QuickSortHelper(arr, 0, size - 1);
     }
@@ -177,33 +179,34 @@ private:
     int MedianOfThree(std::vector<int>& arr, int left, int right) {
         int mid = (left + right) / 2;
         if (arr[right] < arr[left]) {
-            Swap(arr, left, right);
+            swap(arr[left], arr[right]);
         }
         if (arr[mid] < arr[left]) {
-            Swap(arr, left, mid);
+            swap(arr[left], arr[mid]);
         }
         if (arr[right] < arr[mid]) {
-            Swap(arr, mid, right);
+            swap(arr[mid], arr[right]);
         }
         return mid;
     }
 
     int Partition(std::vector<int>& arr, int left, int right, int pivot_index) {
         int pivot_value = arr[pivot_index];
-        Swap(arr, pivot_index, right);
+        swap(arr[pivot_index], arr[right]);
         int store_index = left;
         for (int i = left; i < right; i++) {
             Comparisons++;
             if (arr[i] < pivot_value) {
-                Swap(arr, i, store_index);
+                swap(arr[i], arr[store_index]);
                 store_index++;
             }
         }
-        Swap(arr, store_index, right);
+        swap(arr[store_index], arr[right]);
         return store_index;
     }
-
-    void Swap(std::vector<int>& arr, int i, int j) {
+};
+  /*
+  void Swap(std::vector<int>& arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
@@ -211,10 +214,10 @@ private:
     }
 };
 
-
+*/
 class BubbleSort : public SortingAlgorithm {
 public:
-    void Sort(std::vector<int>& arr) override {
+    void Sort(std::vector<int>& arr) {
         int n = arr.size();
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
@@ -225,7 +228,7 @@ public:
                 }
             }
         }
-    }
+    };
 
 /*
 private:
@@ -240,7 +243,7 @@ private:
 
 class HeapSort : public SortingAlgorithm {
 public:
-    void Sort(std::vector<int>& arr) override {
+    void Sort(std::vector<int>& arr) {
         int n = arr.size();
         BuildMaxHeap(arr, n);
         for (int i = n - 1; i >= 1; i--) {
@@ -278,7 +281,7 @@ private:
             Swaps++;
             Heapify(arr, largest, n);
         }
-    }
+    };
 /*
     void Swap(std::vector<int>& arr, int i, int j) {
         int temp = arr[i];
@@ -291,7 +294,7 @@ private:
 
 class ShellSort : public SortingAlgorithm {
 public:
-    void Sort(std::vector<int>& arr) override {
+    void Sort(std::vector<int>& arr) {
         int n = arr.size();
         for (int gap = n / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i++) {
@@ -314,7 +317,7 @@ public:
 
 class TreeSort : public SortingAlgorithm {
 public:
-    void Sort(std::vector<int>& arr) override {
+    void Sort(std::vector<int>& arr) {
         Node* root = nullptr;
         for (int num : arr) {
             root = Insert(root, num);
