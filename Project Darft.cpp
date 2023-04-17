@@ -3,6 +3,18 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
+#include "SortingAlgorithm.h"
+#include "BubbleSort.h"
+#include "CountingSort.h"
+#include "HeapSort.h"
+#include "InsertionSort.h"
+#include "MergeSort.h"
+#include "QuickSort.h"
+#include "SelectionSort.h"
+#include "ShellSort.h"
+#include "TreeSort.h"
+#include "SortTester.h"
+#include "RandomPermutationArrayGenerator.h"
 
 using namespace std;
 
@@ -382,15 +394,22 @@ public:
 };
 
 
+
+
 int main() {
     const int numTests = 6;
     int testSizes[numTests] = {1000, 2000, 3000, 5000, 7000, 10000};
 
     // Create instances of sorting algorithms to be tested
-    SelectionSort selectionSort;
+    BubbleSort bubbleSort;
+    CountingSort countingSort;
+    HeapSort heapSort;
     InsertionSort insertionSort;
     MergeSort mergeSort;
     QuickSort quickSort;
+    SelectionSort selectionSort;
+    ShellSort shellSort;
+    TreeSort treeSort;
 
     // Create instance of array generator
     RandomPermutationArrayGenerator arrayGenerator;
@@ -403,8 +422,14 @@ int main() {
         int arraySize = testSizes[i];
         int* array = arrayGenerator.GenerateArray(arraySize);
 
-        std::cout << "Testing selection sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(selectionSort, array, arraySize);
+        std::cout << "Testing bubble sort with array size " << arraySize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(bubbleSort, array, arraySize);
+
+        std::cout << "Testing counting sort with array size " << arraySize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(countingSort, array, arraySize);
+
+        std::cout << "Testing heap sort with array size " << arraySize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(heapSort, array, arraySize);
 
         std::cout << "Testing insertion sort with array size " << arraySize << "..." << std::endl;
         sortTester.TestSortingAlgorithm(insertionSort, array, arraySize);
@@ -423,6 +448,16 @@ int main() {
         std::cout << "Testing quick sort (median-of-three pivot) with array size " << arraySize << "..." << std::endl;
         quickSort.SetPivotChoice(QuickSort::PivotChoice::MEDIAN_OF_THREE);
         sortTester.TestSortingAlgorithm(quickSort, array, arraySize);
+
+        std::cout << "Testing selection sort with array size " << arraySize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(selectionSort, array, arraySize);
+
+        std::cout << "Testing shell sort with array size " << arraySize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(shellSort, array, arraySize);
+
+        std::cout << "Testing tree sort with array size " << arraySize << "..." << std::endl;
+        sortTester.TestSortingAlgorithm(treesort, array, arraySize);
+
 
         delete[] array;
     }
