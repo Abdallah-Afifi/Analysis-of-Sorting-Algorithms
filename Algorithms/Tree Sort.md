@@ -31,3 +31,7 @@ Space complexity of Tree Sort is O(n) as the input array is stored in the BST.
 Tree Sort is a simple and efficient sorting algorithm that uses the binary search tree data structure. 
 It has a time complexity of O(n log n) in the average case, making it suitable for sorting large datasets. 
 However, it has a worst-case time complexity of O(n^2), making it inefficient for already sorted input data.
+
+# References 
+
+https://www.geeksforgeeks.org/tree-sort/
