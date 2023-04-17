@@ -320,4 +320,104 @@ void heapify(int arr[], int size, int index)
                                     // remain satisfied after each swap
         }
     }
+
+// Bubble Sort 
+
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    for (i = 0; i < n - 1; i++)
+  
+        // Last i elements are already 
+        // in place
+        for (j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1])
+                swap(arr[j], arr[j + 1]);
+}
+
+// Counting Sort 
+
+void counting_sort(int arr[], int n, int range)
+{
+    int count[range+1] = {0};
+    int output[n];
+
+    for (int i = 0; i < n; i++)
+        count[arr[i]]++;
+
+    for (int i = 1; i <= range; i++)
+        count[i] += count[i-1];
+
+    for (int i = n-1; i >= 0; i--)
+    {
+        output[count[arr[i]]-1] = arr[i];
+        count[arr[i]]--;
+    }
+
+    for (int i = 0; i < n; i++)
+        arr[i] = output[i];
+}
+
+// Radix Sort
+
+int get_max(int arr[], int n)
+{
+    int mx = arr[0];
+    for (int i = 1; i < n; i++)
+        if (arr[i] > mx)
+            mx = arr[i];
+    return mx;
+}
+
+void counting_sort(int arr[], int n, int exp)
+{
+    int output[n];
+    int count[10] = {0};
+
+    for (int i = 0; i < n; i++)
+        count[(arr[i]/exp)%10]++;
+
+    for (int i = 1; i < 10; i++)
+        count[i] += count[i-1];
+
+    for (int i = n-1; i >= 0; i--)
+    {
+        output[count[(arr[i]/exp)%10]-1] = arr[i];
+        count[(arr[i]/exp)%10]--;
+    }
+
+    for (int i = 0; i < n; i++)
+        arr[i] = output[i];
+}
+
+void radix_sort(int arr[], int n)
+{
+    int m = get_max(arr, n);
+
+    for (int exp = 1; m/exp > 0; exp *= 10)
+        counting_sort(arr, n, exp);
+}
+
+
+// Bucket Sort 
+
+void bucket_sort(float arr[], int n)
+{
+    vector<float> buckets[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        int bucket_index = n * arr[i];
+        buckets[bucket_index].push_back(arr[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+        sort(buckets[i].begin(), buckets[i].end());
+
+    int index = 0;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < buckets[i].size(); j++)
+            arr[index++] = buckets[i][j];
+}
+
         
