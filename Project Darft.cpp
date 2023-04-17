@@ -125,38 +125,57 @@ private:
 
 class QuickSort : public SortingAlgorithm {
 public:
-    enum PivotChoice { First, Random };
+    enum PivotChoice { First, Random, Median };
 
     PivotChoice Pivot;
 
-    void Sort(int arr[], int size) override {
+    void Sort(std::vector<int>& arr) override {
+        int size = arr.size();
         QuickSortHelper(arr, 0, size - 1);
     }
 
+
 private:
-    void QuickSortHelper(int arr[], int left, int right) {
+    void QuickSortHelper(std::vector<int>& arr, int left, int right) {
         if (left < right) {
-            int pivot_index = ChoosePivot(left, right);
+            int pivot_index = ChoosePivot(arr, left, right);
             pivot_index = Partition(arr, left, right, pivot_index);
             QuickSortHelper(arr, left, pivot_index - 1);
             QuickSortHelper(arr, pivot_index + 1, right);
         }
     }
 
-    int ChoosePivot(int left, int right) {
+    int ChoosePivot(std::vector<int>& arr, int left, int right) {
         switch (Pivot) {
         case First:
             return left;
         case Random:
             return rand() % (right - left + 1) + left;
+        case Median:
+            return MedianOfThree(arr, left, right);
         }
     }
 
-    int Partition(int arr[], int left, int right, int pivot_index) {
+    int MedianOfThree(std::vector<int>& arr, int left, int right) {
+        int mid = (left + right) / 2;
+        if (arr[right] < arr[left]) {
+            Swap(arr, left, right);
+        }
+        if (arr[mid] < arr[left]) {
+            Swap(arr, left, mid);
+        }
+        if (arr[right] < arr[mid]) {
+            Swap(arr, mid, right);
+        }
+        return mid;
+    }
+
+    int Partition(std::vector<int>& arr, int left, int right, int pivot_index) {
         int pivot_value = arr[pivot_index];
         Swap(arr, pivot_index, right);
         int store_index = left;
         for (int i = left; i < right; i++) {
+            Comparisons++;
             if (arr[i] < pivot_value) {
                 Swap(arr, i, store_index);
                 store_index++;
@@ -166,12 +185,14 @@ private:
         return store_index;
     }
 
-    void Swap(int arr[], int i, int j) {
+    void Swap(std::vector<int>& arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+        Swaps++;
     }
 };
+
 
 
 
