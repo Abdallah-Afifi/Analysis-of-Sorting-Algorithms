@@ -149,6 +149,9 @@ public:
 
     PivotChoice Pivot;
 
+    QuickSort() : SortingAlgorithm("Quick Sort") {}
+
+
     void Sort(std::vector<int>& arr) {
         int size = arr.size();
         QuickSortHelper(arr, 0, size - 1);
@@ -217,6 +220,10 @@ private:
 */
 class BubbleSort : public SortingAlgorithm {
 public:
+  
+  BubbleSort() : SortingAlgorithm("Bubble Sort") {}
+
+  
     void Sort(std::vector<int>& arr) {
         int n = arr.size();
         for (int i = 0; i < n-1; i++) {
@@ -243,6 +250,9 @@ private:
 
 class HeapSort : public SortingAlgorithm {
 public:
+
+HeapSort() : SortingAlgorithm("Heap Sort") {}
+
     void Sort(std::vector<int>& arr) {
         int n = arr.size();
         BuildMaxHeap(arr, n);
@@ -294,6 +304,9 @@ private:
 
 class ShellSort : public SortingAlgorithm {
 public:
+  ShellSort() : SortingAlgorithm("Shell Sort") {}
+
+  
     void Sort(std::vector<int>& arr) {
         int n = arr.size();
         for (int gap = n / 2; gap > 0; gap /= 2) {
@@ -317,6 +330,9 @@ public:
 
 class TreeSort : public SortingAlgorithm {
 public:
+
+TreeSort() : SortingAlgorithm("Tree Sort") {}
+
     void Sort(std::vector<int>& arr) {
         Node* root = nullptr;
         for (int num : arr) {
@@ -325,8 +341,6 @@ public:
         TraverseInOrder(root, arr);
     }
 
-    int Comparisons = 0;
-    int Swaps = 0;
 
 private:
     struct Node {
