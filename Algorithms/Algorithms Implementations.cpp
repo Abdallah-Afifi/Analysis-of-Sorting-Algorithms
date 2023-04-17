@@ -358,66 +358,97 @@ void counting_sort(int arr[], int n, int range)
         arr[i] = output[i];
 }
 
-// Radix Sort
+// Tree Sort
 
-int get_max(int arr[], int n)
+struct Node
 {
-    int mx = arr[0];
-    for (int i = 1; i < n; i++)
-        if (arr[i] > mx)
-            mx = arr[i];
-    return mx;
+    int key;
+    struct Node *left, *right;
+};
+  
+// A utility function to create a new BST Node
+struct Node *newNode(int item)
+{
+    struct Node *temp = new Node;
+    temp->key = item;
+    temp->left = temp->right = NULL;
+    return temp;
 }
-
-void counting_sort(int arr[], int n, int exp)
+  
+// Stores inorder traversal of the BST
+// in arr[]
+void storeSorted(Node *root, int arr[], int &i)
 {
-    int output[n];
-    int count[10] = {0};
-
-    for (int i = 0; i < n; i++)
-        count[(arr[i]/exp)%10]++;
-
-    for (int i = 1; i < 10; i++)
-        count[i] += count[i-1];
-
-    for (int i = n-1; i >= 0; i--)
+    if (root != NULL)
     {
-        output[count[(arr[i]/exp)%10]-1] = arr[i];
-        count[(arr[i]/exp)%10]--;
+        storeSorted(root->left, arr, i);
+        arr[i++] = root->key;
+        storeSorted(root->right, arr, i);
     }
-
-    for (int i = 0; i < n; i++)
-        arr[i] = output[i];
+}
+  
+/* A utility function to insert a new
+   Node with given key in BST */
+Node* insert(Node* node, int key)
+{
+    /* If the tree is empty, return a new Node */
+    if (node == NULL) return newNode(key);
+  
+    /* Otherwise, recur down the tree */
+    if (key < node->key)
+        node->left  = insert(node->left, key);
+    else if (key > node->key)
+        node->right = insert(node->right, key);
+  
+    /* return the (unchanged) Node pointer */
+    return node;
+}
+  
+// This function sorts arr[0..n-1] using Tree Sort
+void treeSort(int arr[], int n)
+{
+    struct Node *root = NULL;
+  
+    // Construct the BST
+    root = insert(root, arr[0]);
+    for (int i=1; i<n; i++)
+        root = insert(root, arr[i]);
+  
+    // Store inorder traversal of the BST
+    // in arr[]
+    int i = 0;
+    storeSorted(root, arr, i);
 }
 
-void radix_sort(int arr[], int n)
+
+// Shell Sort 
+
+int shellSort(int arr[], int n)
 {
-    int m = get_max(arr, n);
-
-    for (int exp = 1; m/exp > 0; exp *= 10)
-        counting_sort(arr, n, exp);
-}
-
-
-// Bucket Sort 
-
-void bucket_sort(float arr[], int n)
-{
-    vector<float> buckets[n];
-
-    for (int i = 0; i < n; i++)
+    // Start with a big gap, then reduce the gap
+    for (int gap = n/2; gap > 0; gap /= 2)
     {
-        int bucket_index = n * arr[i];
-        buckets[bucket_index].push_back(arr[i]);
+        // Do a gapped insertion sort for this gap size.
+        // The first gap elements a[0..gap-1] are already in gapped order
+        // keep adding one more element until the entire array is
+        // gap sorted 
+        for (int i = gap; i < n; i += 1)
+        {
+            // add a[i] to the elements that have been gap sorted
+            // save a[i] in temp and make a hole at position i
+            int temp = arr[i];
+  
+            // shift earlier gap-sorted elements up until the correct 
+            // location for a[i] is found
+            int j;            
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+                arr[j] = arr[j - gap];
+              
+            //  put temp (the original a[i]) in its correct location
+            arr[j] = temp;
+        }
     }
-
-    for (int i = 0; i < n; i++)
-        sort(buckets[i].begin(), buckets[i].end());
-
-    int index = 0;
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < buckets[i].size(); j++)
-            arr[index++] = buckets[i][j];
+    return 0;
 }
 
         
