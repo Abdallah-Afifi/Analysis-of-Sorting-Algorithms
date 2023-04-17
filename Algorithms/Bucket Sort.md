@@ -27,3 +27,6 @@ The space complexity of bucket sort is O(n+k), since we need to create n buckets
 One advantage of bucket sort is that it is very efficient when the input elements are uniformly distributed over a range. 
 In such cases, bucket sort can achieve linear time complexity. 
 However, bucket sort is not suitable for sorting data that is not uniformly distributed.
+
+# References 
+https://www.geeksforgeeks.org/bucket-sort-2/
