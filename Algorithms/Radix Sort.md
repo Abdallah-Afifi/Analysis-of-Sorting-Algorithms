@@ -15,8 +15,11 @@ The sorting is performed using a stable sorting algorithm, such as Counting Sort
 # Step-by-step process for implementing Radix Sort
 
 Determine the maximum number of digits in the largest element in the array.
+
 Iterate over the digits, starting with the least significant digit and working up.
+
 For each digit, sort the elements based on that digit using a stable sorting algorithm, such as Counting Sort or Bucket Sort.
+
 Combine the results of each pass to produce the final sorted array.
 
 # References
