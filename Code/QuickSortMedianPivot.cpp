@@ -1,4 +1,5 @@
 #include "QuickSortMedianPivot.h"
+#include "SortingAlgorithm.h"
 #include <vector>
 #include <algorithm>
 
