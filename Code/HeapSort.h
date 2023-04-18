@@ -1,3 +1,6 @@
+#ifndef HEAP_SORT_H
+#define HEAP_SORT_H
+
 #include <vector>
 #include "SortingAlgorithm.h"
 
@@ -12,3 +15,5 @@ private:
 
 
 };
+
+#endif //HEAP_SORT_H
