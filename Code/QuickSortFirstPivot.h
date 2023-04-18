@@ -1,3 +1,6 @@
+#ifndef QUICK_SORT_FIRST_PIVOT_H
+#define QUICK_SORT_FIRST_PIVOT_H
+
 #include <vector>
 #include "SortingAlgorithm.h"
 
