@@ -1,6 +1,7 @@
 #include "RandomPermutationVectorGenerator.h"
 #include <random>
 #include <algorithm>
+#include <vector>
 
 std::vector<int> RandomPermutationVectorGenerator::GenerateVector(int size) {
     std::vector<int> vec(size);
