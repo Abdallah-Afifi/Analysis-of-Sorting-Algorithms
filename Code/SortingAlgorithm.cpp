@@ -1,20 +1,20 @@
 #include "SortingAlgorithm.h"
 #include <string>
 
-SortingAlgorithm::SortingAlgorithm(string name) {
-    Name = name;
-    Comparisons = 0;
-    Swaps = 0;
+SortingAlgorithm::SortingAlgorithm(string Name) {
+    name = Name;
+    comparisons = 0;
+    swaps = 0;
 }
 
 int SortingAlgorithm::GetComparisons() {
-    return Comparisons;
+    return comparisons;
 }
 
 int SortingAlgorithm::GetSwaps() {
-    return Swaps;
+    return swaps;
 }
 
 string SortingAlgorithm::GetName() {
-    return Name;
+    return name;
 }
