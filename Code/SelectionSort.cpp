@@ -1,4 +1,5 @@
 #include "SelectionSort.h"
+#include "SortingAlgorithm.h"
 #include <algorithm>
 #include <vector>
 
