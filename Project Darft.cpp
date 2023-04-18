@@ -1,20 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <random>
 #include <chrono>
-#include "SortingAlgorithm.h"
-#include "BubbleSort.h"
-#include "CountingSort.h"
-#include "HeapSort.h"
-#include "InsertionSort.h"
-#include "MergeSort.h"
-#include "QuickSort.h"
-#include "SelectionSort.h"
-#include "ShellSort.h"
-#include "TreeSort.h"
-#include "SortTester.h"
-#include "RandomPermutationArrayGenerator.h"
+#include <random>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -22,35 +11,30 @@ class SortingAlgorithm {
 
 public: 
 
-  SortingAlgorithm(string name) {
+    SortingAlgorithm(string name) {
         Name = name;
         Comparisons = 0;
         Swaps = 0;
     }
 
- virtual void Sort(vector<int>& arr) = 0; 
+    virtual void Sort(vector<int>& arr) = 0; 
     
-   int GetComparisons() {
-       
-       return Comparisons;
-       
-   }
+    int GetComparisons() {
+        return Comparisons;
+    }
     
     int GetSwaps() {
-       
-       return Swaps;
-       
-   }
-
+        return Swaps;
+    }
+    
+    string GetName() {
+        return Name;
+    }
 protected:
     string Name;
     int Comparisons;
     int Swaps;
-
-
-
 };
-   
 
 class SelectionSort : public SortingAlgorithm {
 public:
@@ -91,6 +75,7 @@ public:
         }
     }
 };
+
 
 class MergeSort : public SortingAlgorithm {
 public:
@@ -143,39 +128,98 @@ private:
     }
 };
 
-class QuickSort : public SortingAlgorithm {
+class QuickSortFirstPivot : public SortingAlgorithm {
 public:
-    enum PivotChoice { First, Random, Median };
-
-    PivotChoice Pivot;
-
-    QuickSort() : SortingAlgorithm("Quick Sort") {}
-
+    QuickSortFirstPivot() : SortingAlgorithm("Quick Sort - First Pivot") {}
 
     void Sort(std::vector<int>& arr) {
         int size = arr.size();
         QuickSortHelper(arr, 0, size - 1);
     }
 
-
 private:
     void QuickSortHelper(std::vector<int>& arr, int left, int right) {
         if (left < right) {
-            int pivot_index = ChoosePivot(arr, left, right);
+            int pivot_index = left;
             pivot_index = Partition(arr, left, right, pivot_index);
             QuickSortHelper(arr, left, pivot_index - 1);
             QuickSortHelper(arr, pivot_index + 1, right);
         }
     }
 
-    int ChoosePivot(std::vector<int>& arr, int left, int right) {
-        switch (Pivot) {
-        case First:
-            return left;
-        case Random:
-            return rand() % (right - left + 1) + left;
-        case Median:
-            return MedianOfThree(arr, left, right);
+    int Partition(std::vector<int>& arr, int left, int right, int pivot_index) {
+        int pivot_value = arr[pivot_index];
+        swap(arr[pivot_index], arr[right]);
+        Swaps++;
+        int store_index = left;
+        for (int i = left; i < right; i++) {
+            Comparisons++;
+            if (arr[i] < pivot_value) {
+                swap(arr[i], arr[store_index]);
+                Swaps++;
+                store_index++;
+            }
+        }
+        swap(arr[store_index], arr[right]);
+        Swaps++;
+        return store_index;
+    }
+};
+
+class QuickSortRandomPivot : public SortingAlgorithm {
+public:
+    QuickSortRandomPivot() : SortingAlgorithm("Quick Sort - Random Pivot") {}
+
+    void Sort(std::vector<int>& arr) {
+        int size = arr.size();
+        QuickSortHelper(arr, 0, size - 1);
+    }
+
+private:
+    void QuickSortHelper(std::vector<int>& arr, int left, int right) {
+        if (left < right) {
+            int pivot_index = rand() % (right - left + 1) + left;
+            pivot_index = Partition(arr, left, right, pivot_index);
+            QuickSortHelper(arr, left, pivot_index - 1);
+            QuickSortHelper(arr, pivot_index + 1, right);
+        }
+    }
+
+    int Partition(std::vector<int>& arr, int left, int right, int pivot_index) {
+        int pivot_value = arr[pivot_index];
+        swap(arr[pivot_index], arr[right]);
+        Swaps++;
+        int store_index = left;
+        for (int i = left; i < right; i++) {
+            Comparisons++;
+            if (arr[i] < pivot_value) {
+                swap(arr[i], arr[store_index]);
+                Swaps++;
+                store_index++;
+            }
+        }
+        swap(arr[store_index], arr[right]);
+        Swaps++;
+        return store_index;
+    }
+};
+
+class QuickSortMedianPivot : public SortingAlgorithm {
+public:
+    QuickSortMedianPivot() : SortingAlgorithm("Quick Sort - Median Pivot") {}
+
+    void Sort(std::vector<int>& arr) {
+        int size = arr.size();
+        QuickSortHelper(arr, 0, size - 1);
+    }
+
+private:
+    void QuickSortHelper(std::vector<int>& arr, int left, int right) {
+        if (left < right) {
+            int pivot_index = MedianOfThree(arr, left, right);
+            pivot_index = Partition(arr, left, right, pivot_index);
+            QuickSortHelper(arr, left, pivot_index - 1);
+            QuickSortHelper(arr, pivot_index + 1, right);
         }
     }
 
@@ -196,28 +240,24 @@ private:
     int Partition(std::vector<int>& arr, int left, int right, int pivot_index) {
         int pivot_value = arr[pivot_index];
         swap(arr[pivot_index], arr[right]);
+        Swaps++;
         int store_index = left;
         for (int i = left; i < right; i++) {
             Comparisons++;
             if (arr[i] < pivot_value) {
                 swap(arr[i], arr[store_index]);
+                Swaps++;
                 store_index++;
             }
         }
         swap(arr[store_index], arr[right]);
+        Swaps++;
         return store_index;
     }
 };
-  /*
-  void Swap(std::vector<int>& arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        Swaps++;
-    }
-};
 
-*/
+
+
 class BubbleSort : public SortingAlgorithm {
 public:
   
@@ -235,18 +275,50 @@ public:
                 }
             }
         }
-    };
-
-/*
-private:
-    void Swap(std::vector<int>& arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        Swaps++;
     }
+    };
+    
+    class CountingSort : public SortingAlgorithm {
+public:
+  CountingSort() : SortingAlgorithm("Counting Sort") {}
+
+  void Sort(std::vector<int>& arr) {
+    int n = arr.size();
+
+    // Find the range of input elements
+    int k = *max_element(arr.begin(), arr.end());
+
+    // Create a count array to store count of individual elements
+    std::vector<int> count(k + 1, 0);
+
+    // Store count of each element
+    for (int i = 0; i < n; i++) {
+      count[arr[i]]++;
+      Comparisons++;
+    }
+
+    // Change count[i] so that count[i] now contains actual position of this element in output array
+    for (int i = 1; i <= k; i++) {
+      count[i] += count[i - 1];
+      Comparisons++;
+    }
+
+    // Build the output array
+    std::vector<int> output(n);
+    for (int i = n - 1; i >= 0; i--) {
+      output[count[arr[i]] - 1] = arr[i];
+      count[arr[i]]--;
+      Swaps++;
+    }
+
+    // Copy the output array to the input array
+    for (int i = 0; i < n; i++) {
+      arr[i] = output[i];
+      Swaps++;
+    }
+  }
 };
-*/
+
 
 class HeapSort : public SortingAlgorithm {
 public:
@@ -291,23 +363,15 @@ private:
             Swaps++;
             Heapify(arr, largest, n);
         }
-    };
-/*
-    void Swap(std::vector<int>& arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        Swaps++;
     }
-};
-*/
-
+    };
+    
+    
 class ShellSort : public SortingAlgorithm {
 public:
-  ShellSort() : SortingAlgorithm("Shell Sort") {}
+    ShellSort() : SortingAlgorithm("Shell Sort") {}
 
-  
-    void Sort(std::vector<int>& arr) {
+    void Sort(vector<int>& arr) {
         int n = arr.size();
         for (int gap = n / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i++) {
@@ -325,22 +389,18 @@ public:
     }
 };
 
-
-
-
 class TreeSort : public SortingAlgorithm {
 public:
+    TreeSort() : SortingAlgorithm("Tree Sort") {}
 
-TreeSort() : SortingAlgorithm("Tree Sort") {}
-
-    void Sort(std::vector<int>& arr) {
+    void Sort(vector<int>& arr) {
         Node* root = nullptr;
         for (int num : arr) {
             root = Insert(root, num);
         }
+        arr.clear(); // clear the input vector before adding the sorted values
         TraverseInOrder(root, arr);
     }
-
 
 private:
     struct Node {
@@ -357,6 +417,7 @@ private:
         }
 
         Comparisons++;
+        Swaps++;
         if (num < root->val) {
             root->left = Insert(root->left, num);
         } else {
@@ -366,125 +427,113 @@ private:
         return root;
     }
 
-    void TraverseInOrder(Node* root, std::vector<int>& arr) {
+    void TraverseInOrder(Node* root, vector<int>& arr) {
         if (!root) {
             return;
         }
         TraverseInOrder(root->left, arr);
+        if (!arr.empty() && arr.back() > root->val) {
+            swap(arr.back(), root->val);
+            Swaps++;
+        }
         arr.push_back(root->val);
         TraverseInOrder(root->right, arr);
+        Comparisons++;
     }
 };
+
 
 
 
 
 class RandomPermutationVectorGenerator {
 public:
-    static std::vector<int> GenerateVector(int n) {
-        std::vector<int> vec(n);
+    static vector<int> GenerateVector(int n) {
+        vector<int> vec(n);
         for (int i = 0; i < n; i++) {
             vec[i] = i + 1;
         }
-        std::shuffle(vec.begin(), vec.end(), std::mt19937(std::random_device()()));
+        random_device rd;
+        mt19937 g(rd());
+        shuffle(vec.begin(), vec.end(), g);
         return vec;
     }
 };
 
-
-
 class SortTester {
 public:
-    static void TestSortingAlgorithm(SortingAlgorithm* algorithm) {
-        int sizes[] = {1000, 2000, 3000, 5000, 7000, 10000};
-        int num_sizes = sizeof(sizes) / sizeof(int);
+    static void TestSortingAlgorithm(SortingAlgorithm* algorithm, vector<int>& arr, int n) {
+        auto start_time = chrono::high_resolution_clock::now();
+        algorithm->Sort(arr);
+        auto end_time = chrono::high_resolution_clock::now();
 
-        for (int i = 0; i < num_sizes; i++) {
-            int n = sizes[i];
-            int* vec = RandomPermutationArrayGenerator::GenerateArray(n);
+        chrono::duration<double, milli> elapsed_time = end_time - start_time;
+        cout << algorithm->GetName();
 
-            auto start_time = std::chrono::high_resolution_clock::now();
-            algorithm->Sort(vec, n);
-            auto end_time = std::chrono::high_resolution_clock::now();
-
-            std::chrono::duration<double, std::milli> elapsed_time = end_time - start_time;
-            std::cout << "Size " << n << ": " << algorithm->GetComparisons() << " comparisons, "
-                      << algorithm->GetSwaps() << " swaps, " << elapsed_time.count() << " ms elapsed" 
-                      << std::endl;
-
-            delete[] vec;
+        if (is_sorted(arr.begin(), arr.end())) {
+            cout << " (sorted)";
+        } else {
+            cout << " (not sorted)";
         }
+
+        cout << " with size " << n << ": " 
+             << algorithm->GetComparisons() << " comparisons, "
+             << algorithm->GetSwaps() << " swaps, " 
+             << elapsed_time.count() << " ms elapsed" 
+             << endl;
     }
 };
 
 
 
-
 int main() {
-    const int numTests = 6;
-    int testSizes[numTests] = {1000, 2000, 3000, 5000, 7000, 10000};
+    const int numTests = 10;
+    int testSizes[numTests] = {1000, 2000, 3000, 5000, 7000, 10000, 13000, 16000, 20000, 24000};
 
     // Create instances of sorting algorithms to be tested
-    BubbleSort bubbleSort;
-    CountingSort countingSort;
-    HeapSort heapSort;
-    InsertionSort insertionSort;
-    MergeSort mergeSort;
-    QuickSort quickSort;
-    SelectionSort selectionSort;
-    ShellSort shellSort;
-    TreeSort treeSort;
-
+    vector<SortingAlgorithm*> sortingAlgorithms;
+    sortingAlgorithms.push_back(new SelectionSort());
+    sortingAlgorithms.push_back(new InsertionSort());
+    sortingAlgorithms.push_back(new MergeSort());
+    sortingAlgorithms.push_back(new QuickSortFirstPivot());
+    sortingAlgorithms.push_back(new QuickSortRandomPivot());
+    sortingAlgorithms.push_back(new QuickSortMedianPivot());
+    sortingAlgorithms.push_back(new BubbleSort());
+    sortingAlgorithms.push_back(new CountingSort());
+    sortingAlgorithms.push_back(new HeapSort());
+    sortingAlgorithms.push_back(new TreeSort());
+    sortingAlgorithms.push_back(new ShellSort()); 
+    
     // Create instance of array generator
-    RandomPermutationArrayGenerator arrayGenerator;
-
+    RandomPermutationVectorGenerator vecGenerator;
+    
     // Create instance of sort tester
     SortTester sortTester;
 
     // Test each sorting algorithm with various array sizes
     for (int i = 0; i < numTests; i++) {
         int vectorSize = testSizes[i];
-        int* vector = arrayGenerator.GenerateArray(vectorSize);
+        vector<vector<int>> vectors;
 
-        std::cout << "Testing bubble sort with array size " << vectorSize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(bubbleSort, vector, vectorSize);
+        // Generate a new vector for each sorting algorithm
+        for (int j = 0; j < sortingAlgorithms.size(); j++) {
+            vectors.push_back(vecGenerator.GenerateVector(vectorSize));
+        }
 
-        std::cout << "Testing counting sort with array size " << vectorSize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(countingSort, vector, vectorSize);
+        cout << endl << "Testing with array size " << vectorSize << ":" << endl;
 
-        std::cout << "Testing heap sort with array size " << vectorSize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(heapSort, vector, vectorSize);
+        // Test each sorting algorithm with its own generated vector
+        for (int j = 0; j < sortingAlgorithms.size(); j++) {
+            sortTester.TestSortingAlgorithm(sortingAlgorithms[j], vectors[j], vectorSize);
+        }
+    }
 
-        std::cout << "Testing insertion sort with array size " << vectorSize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(insertionSort, vector, vectorSize);
-
-        std::cout << "Testing merge sort with array size " << vectorSize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(mergeSort, vector, vectorSize);
-
-        std::cout << "Testing quick sort (first element pivot) with array size " << vectorSize << "..." << std::endl;
-        quickSort.ChoosePivot(QuickSort::PivotChoice::FIRST_ELEMENT);
-        sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
-
-        std::cout << "Testing quick sort (random element pivot) with array size " << vectorSize << "..." << std::endl;
-        quickSort.ChoosePivot(QuickSort::PivotChoice::RANDOM_ELEMENT);
-        sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
-
-        std::cout << "Testing quick sort (median-of-three pivot) with array size " << vectorSize << "..." << std::endl;
-        quickSort.ChoosePivot(QuickSort::PivotChoice::MEDIAN_OF_THREE);
-        sortTester.TestSortingAlgorithm(quickSort, vector, vectorSize);
-
-        std::cout << "Testing selection sort with array size " << vectorSize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(selectionSort, vector, vectorSize);
-
-        std::cout << "Testing shell sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(shellSort, vector, vectorSize);
-
-        std::cout << "Testing tree sort with array size " << arraySize << "..." << std::endl;
-        sortTester.TestSortingAlgorithm(treesort, vector, vectorSize);
-
-
-        delete[] vector;
+    // Free allocated memory
+    for (int i = 0; i < sortingAlgorithms.size(); i++) {
+        delete sortingAlgorithms[i];
     }
 
     return 0;
 }
+
+
