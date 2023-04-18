@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "SortingAlgorithm.h"
 #include "InsertionSort.h"
 
@@ -7,7 +8,7 @@ using namespace std;
 InsertionSort::InsertionSort() : SortingAlgorithm("Insertion Sort")
 {}
 
-InsertionSort::Sort(vector<int>& vec) {
+InsertionSort::Sort(std::vector<int>& vec) {
  
         int size = vec.size();
         for (int i = 1; i < size; i++) {
