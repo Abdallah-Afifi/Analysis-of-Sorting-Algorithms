@@ -1,5 +1,5 @@
-#ifndef SORTINGALGORITHM_H
-#define SORTINGALGORITHM_H
+#ifndef SORTING_ALGORITHM_H
+#define SORTING_ALGORITHM_H
 
 #include <string>
 #include <vector>
@@ -21,4 +21,4 @@ protected:
 };
 
 
-#endif //SORTINGALGORITHM_H
+#endif //SORTING_ALGORITHM_H
