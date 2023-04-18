@@ -11,9 +11,9 @@ void SelectionSort::Sort(vector<int>& vec) {
             if (vec[j] < vec[minIdx]) {
                 minIdx = j;
             }
-            Comparisons++;
+            comparisons++;
         }
         swap(vec[i], vec[minIdx]);
-        Swaps++;
+        swaps++;
     }
 }
