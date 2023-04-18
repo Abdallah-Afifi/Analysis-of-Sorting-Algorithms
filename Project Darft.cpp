@@ -469,7 +469,8 @@ public:
 
         chrono::duration<double, milli> elapsed_time = end_time - start_time;
         cout << algorithm->GetName();
-
+        
+        //checking if the vector is sorted before printing
         if (is_sorted(arr.begin(), arr.end())) {
             cout << " (sorted)";
         } else {
