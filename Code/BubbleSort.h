@@ -1,5 +1,5 @@
-#ifndef BUBBLESORT_H
-#define BUBBLESORT_H
+#ifndef BUBBLE_SORT_H
+#define BUBBLE_SORT_H
 
 #include "SortingAlgorithm.h"
 #include <vector>
@@ -10,4 +10,4 @@ public:
     void Sort(std::vector<int>& vec);
 };
 
-#endif
+#endif  //BUBBLE_SORT_H
