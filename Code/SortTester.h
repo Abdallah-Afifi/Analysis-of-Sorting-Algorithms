@@ -1,10 +1,14 @@
-#ifndef SORTTESTER_H
-#define SORTTESTER_H
+#ifndef SORT_TESTER_H
+#define SORT_TESTER_H
 
-Class SortTester {
-private: 
+#include <vector>
+#include <chrono>
+#include <algorithm>
+#include "SortingAlgorithm.h"
 
-void TestSortingAlgorithm ();
-}
+class SortTester {
+public:
+    static void TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size);
+};
 
-#endif //SPRTTESTER_H
+#endif // SORT_TESTER_H
