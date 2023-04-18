@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include "SortingAlgorithm.h"
 #include "InsertionSort.h"
