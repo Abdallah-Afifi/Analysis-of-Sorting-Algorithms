@@ -9,4 +9,4 @@ public:
 };
 
 
-#endif 
+#endif //RANDOM_PERMUTATION_VECTOR_GENERATOR_H
