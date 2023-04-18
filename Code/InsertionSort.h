@@ -1,7 +1,11 @@
-#ifndef INSERTIONSORT_H
-#define INSERTIONSORT_H
+#ifndef INSERTION_SORT_H
+#define INSERTION_SORT_H
+
+
 #include "SortingAlgorithm.h"
 #include <vector>
+
+
 Class InsertionSort : private SortingAlgorithm {
 public:
   InsertionSort();
