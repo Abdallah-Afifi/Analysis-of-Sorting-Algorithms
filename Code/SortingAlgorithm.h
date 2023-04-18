@@ -16,8 +16,8 @@ public:
 
 protected:
     string Name;
-    int Comparisons;
-    int Swaps;
+    int comparisons;
+    int swaps;
 };
 
 
