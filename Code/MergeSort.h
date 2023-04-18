@@ -1,5 +1,5 @@
-#ifndef MERGESORT_H
-#define MERGESORT_H
+#ifndef MERGE_SORT_H
+#define MERGE_SORT_H
 
 #include "SortingAlgorithm.h"
 #include <vector>
@@ -15,4 +15,4 @@ private:
     void Merge(std::vector<int>& vec, int left, int mid, int right);
 };
 
-#endif /* MERGESORT_H */
+#endif //MERGE+_SORT_H 
