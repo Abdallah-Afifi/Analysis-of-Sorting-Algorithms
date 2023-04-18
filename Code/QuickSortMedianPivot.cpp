@@ -1,4 +1,6 @@
 #include "QuickSortMedianPivot.h"
+#include <vector>
+#include <algorithm>
 
 QuickSortMedianPivot::QuickSortMedianPivot() : SortingAlgorithm("Quick Sort Median Pivot") {}
 
