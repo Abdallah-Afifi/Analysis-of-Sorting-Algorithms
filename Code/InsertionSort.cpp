@@ -9,17 +9,17 @@ InsertionSort::InsertionSort() : SortingAlgorithm("Insertion Sort")
 
 InsertionSort::Sort(vector<int>& vec) {
  
-        int size = arr.size();
+        int size = vec.size();
         for (int i = 1; i < size; i++) {
-            int key = arr[i];
+            int key = vec[i];
             int j = i - 1;
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
+            while (j >= 0 && vec[j] > key) {
+                vec[j + 1] = vec[j];
                 j--;
                 comparisons++;
                 swaps++;
             }
-            arr[j + 1] = key;
+            vec[j + 1] = key;
         }
   
 }
