@@ -1,5 +1,5 @@
-#ifndef COUNTINGSORT_H
-#define COUNTINGSORT_H
+#ifndef COUNTING_SORT_H
+#define COUNTING_SORT_H
 
 #include "SortingAlgorithm.h"
 #include <vector>
@@ -10,4 +10,4 @@ public:
   virtual void Sort(std::vector<int>& vec);
 };
 
-#endif // COUNTINGSORT_H
+#endif // COUNTING_SORT_H
