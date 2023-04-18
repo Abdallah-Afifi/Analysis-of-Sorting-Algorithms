@@ -1,6 +1,7 @@
 #include "SortTester.h"
 #include "SortingAlgorithm.h"
 #include <iostream>
+#include <vector>
 
 void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size) {
     auto start_time = std::chrono::high_resolution_clock::now();
