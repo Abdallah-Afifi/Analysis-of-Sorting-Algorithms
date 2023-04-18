@@ -1,10 +1,13 @@
-#ifndef SELECTIONSORT_H
-#define SELECTIONSORT_H
+#ifndef SELECTION_SORT_H
+#define SELECTION_SORT_H
 
-Class SelectionSort : private SortingAlgorithm {
-private: 
+#include "SortingAlgorithm.h"
 
-void sort ();
-}
+class SelectionSort : public SortingAlgorithm {
+public:
+    SelectionSort();
 
-#endif //SELECTIONSORT_H
+    void Sort(vector<int>& vec);
+};
+
+#endif //SELECTION_SORT_H
