@@ -1,6 +1,8 @@
 #ifndef QUICK_SORT_MEDIAN_PIVOT_H
 #define QUICK_SORT_MEDIAN_PIVOT_H
+
 #include "SortingAlgorithm.h"
+#include <vector>
 
 class QuickSortMedianPivot : public SortingAlgorithm {
 public:
