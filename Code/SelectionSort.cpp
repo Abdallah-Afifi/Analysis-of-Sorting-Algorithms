@@ -1,9 +1,10 @@
 #include "SelectionSort.h"
 #include <algorithm>
+#include <vector>
 
 SelectionSort::SelectionSort() : SortingAlgorithm("Selection Sort") {}
 
-void SelectionSort::Sort(vector<int>& vec) {
+void SelectionSort::Sort(std::vector<int>& vec) {
     int size = vec.size();
     for (int i = 0; i < size - 1; i++) {
         int minIdx = i;
@@ -13,7 +14,7 @@ void SelectionSort::Sort(vector<int>& vec) {
             }
             comparisons++;
         }
-        swap(vec[i], vec[minIdx]);
+        std::swap(vec[i], vec[minIdx]);
         swaps++;
     }
 }
