@@ -1,6 +1,8 @@
 #include "QuickSortRandomPivot.h"
 #include "SortingAlgorithm.h"
+
 #include <vector>
+#include <algorithm>
 
 QuickSortRandomPivot::QuickSortRandomPivot() : SortingAlgorithm("Quick Sort Random Pivot") {}
 
