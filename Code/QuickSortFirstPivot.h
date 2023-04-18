@@ -9,5 +9,5 @@ public:
 private:
     void QuickSortHelper(std::vector<int>& vec, int left, int right); 
 
-    int Partition(std::vector<int>& vec, int left, int right, int pivot_index); 
+    int Partition(std::vector<int>& vec, int left, int right, int pivotIndex); 
 };
