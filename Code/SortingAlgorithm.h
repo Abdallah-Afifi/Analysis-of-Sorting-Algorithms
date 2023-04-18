@@ -2,17 +2,23 @@
 #define SORTINGALGORITHM_H
 
 #include <string>
-#include <algorithm>
+#include <vector>
 
-Class SortingAlgorithm {
-protected: 
-  string name;
-  int comparisons;
-  int swaps;
+using namespace std;
 
-void virtual sort () = 0;
+class SortingAlgorithm {
+public:
+    SortingAlgorithm(string name);
+    virtual void Sort(vector<int>& vec) = 0;
+    int GetComparisons();
+    int GetSwaps();
+    string GetName();
 
-bool is_sorted ();
-}
+protected:
+    string Name;
+    int Comparisons;
+    int Swaps;
+};
+
 
 #endif //SORTINGALGORITHM_H
