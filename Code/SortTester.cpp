@@ -2,6 +2,7 @@
 #include "SortingAlgorithm.h"
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size) {
     auto start_time = std::chrono::high_resolution_clock::now();
