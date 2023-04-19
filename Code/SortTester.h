@@ -2,8 +2,6 @@
 #define SORT_TESTER_H
 
 #include <vector>
-#include <chrono>
-#include <algorithm>
 #include "SortingAlgorithm.h"
 
 class SortTester {
