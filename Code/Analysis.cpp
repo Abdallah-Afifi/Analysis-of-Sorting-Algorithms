@@ -1,3 +1,20 @@
+#include <vector>
+#include <iostream>
+#include "BubbleSort.h"
+#include "CountingSort.h"
+#include "HeapSort.h"
+#include "InsertionSort.h"
+#include "MergeSort.h"
+#include "QuickSortFirstPivot.h"
+#include "QuickSortMedianPivot.h"
+#include "QuickSortRandomPivot.h"
+#include "RandomPermutationVectorGenerator.h"
+#include "SelectionSort.h"
+#include "ShellSort.h"
+#include "SortTester.h"
+#include "SortAlgorithm.h"
+#include "TreeSort.h"
+
 int main() {
     const int numTests = 10;
     int testSizes[numTests] = {1000, 2000, 3000, 5000, 7000, 10000, 13000, 16000, 20000, 24000};
