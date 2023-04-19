@@ -1,0 +1,50 @@
+int main() {
+    const int numTests = 10;
+    int testSizes[numTests] = {1000, 2000, 3000, 5000, 7000, 10000, 13000, 16000, 20000, 24000};
+
+    // Create instances of sorting algorithms to be tested
+    std::vector<SortingAlgorithm*> sortingAlgorithms;
+    sortingAlgorithms.push_back(new SelectionSort());
+    sortingAlgorithms.push_back(new InsertionSort());
+    sortingAlgorithms.push_back(new MergeSort());
+    sortingAlgorithms.push_back(new QuickSortFirstPivot());
+    sortingAlgorithms.push_back(new QuickSortRandomPivot());
+    sortingAlgorithms.push_back(new QuickSortMedianPivot());
+    sortingAlgorithms.push_back(new BubbleSort());
+    sortingAlgorithms.push_back(new CountingSort());
+    sortingAlgorithms.push_back(new HeapSort());
+    sortingAlgorithms.push_back(new TreeSort());
+    sortingAlgorithms.push_back(new ShellSort()); 
+    
+    // Create instance of array generator
+    RandomPermutationVectorGenerator vecGenerator;
+    
+    // Create instance of sort tester
+    SortTester sortTester;
+
+    // Test each sorting algorithm with various array sizes
+    for (int i = 0; i < numTests; i++) {
+        int vectorSize = testSizes[i];
+        std::vector<std::vector<int>> vectors;
+
+        // Generate a new vector for each sorting algorithm
+        for (int j = 0; j < sortingAlgorithms.size(); j++) {
+            vectors.push_back(vecGenerator.GenerateVector(vectorSize));
+        }
+
+        cout << endl << "Testing with array size " << vectorSize << ":" << endl;
+
+        // Test each sorting algorithm with its own generated vector
+        for (int j = 0; j < sortingAlgorithms.size(); j++) {
+            sortTester.TestSortingAlgorithm(sortingAlgorithms[j], vectors[j], vectorSize);
+        }
+    }
+
+    // Free allocated memory
+    for (int i = 0; i < sortingAlgorithms.size(); i++) {
+        delete sortingAlgorithms[i];
+    }
+
+    return 0;
+}
+
