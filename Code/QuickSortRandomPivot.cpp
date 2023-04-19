@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <string>
 
 QuickSortRandomPivot::QuickSortRandomPivot() : SortingAlgorithm("Quick Sort Random Pivot") {}
 

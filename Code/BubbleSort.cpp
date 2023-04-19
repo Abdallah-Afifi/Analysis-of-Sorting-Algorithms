@@ -1,6 +1,7 @@
 #include "BubbleSort.h"
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 BubbleSort::BubbleSort() : SortingAlgorithm("Bubble Sort") {}
 

@@ -8,14 +8,14 @@
 
 class SortingAlgorithm {
 public:
-    SortingAlgorithm(string Name);
-    virtual void Sort(vector<int>& vec) = 0;
+    SortingAlgorithm(std::string Name);
+    virtual void Sort(std::vector<int>& vec) = 0;
     int GetComparisons();
     int GetSwaps();
-    string GetName();
+    std::string GetName();
 
 protected:
-    string name;
+    std::string name;
     int comparisons;
     int swaps;
 };

@@ -2,12 +2,13 @@
 #define HEAP_SORT_H
 
 #include <vector>
+#include <string>
 #include "SortingAlgorithm.h"
 
 class HeapSort : public SortingAlgorithm {
   
 public:
-  HeapSort()
+	HeapSort();
   void Sort(std::vector<int>& vec);
 private:
    void BuildMaxHeap(std::vector<int>& vec, int size);

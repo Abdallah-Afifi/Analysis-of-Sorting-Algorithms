@@ -3,6 +3,7 @@
 
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 class QuickSortMedianPivot : public SortingAlgorithm {
 public:

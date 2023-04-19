@@ -1,9 +1,10 @@
 #include <vector>
 #include <algorithm>
+#include <string>
 #include "SortingAlgorithm.h"
 #include "HeapSort.h"
 
-HeapSort() : SortingAlgorithm("Heap Sort") {}
+HeapSort::HeapSort() : SortingAlgorithm ("Heap Sort") {}
 
 void HeapSort::Sort(std::vector<int>& vec) {
         int size = vec.size();

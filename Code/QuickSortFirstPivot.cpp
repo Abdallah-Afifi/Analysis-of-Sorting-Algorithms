@@ -1,10 +1,11 @@
 #include <vector>
 #include <algorithm>
+#include <string>
 #include "SortingAlgorithm.h"
 #include "QuickSortFirstPivot.h"
 
 
-QuickSortFirstPivot::QuickSortFirstPivot() : SortingAlgorithm "Quick Sort First Pivot" {}
+QuickSortFirstPivot::QuickSortFirstPivot() : SortingAlgorithm ("Quick Sort First Pivot") {}
 
 void QuickSortFirstPivot::Sort(std::vector<int>& vec) {
   
@@ -22,7 +23,7 @@ void QuickSortFirstPivot::QuickSortHelper(std::vector<int>& vec, int left, int r
 }
 
 int QuickSortFirstPivot::Partition(std::vector<int>& vec, int left, int right, int pivotIndex) {
-        int pivotValue = arr[pivotIndex];
+        int pivotValue = vec[pivotIndex];
         std::swap(vec[pivotIndex], vec[right]);
         swaps++;
         int storeIndex = left;

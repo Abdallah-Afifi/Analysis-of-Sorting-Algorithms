@@ -4,12 +4,13 @@
 
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 
-Class InsertionSort : private SortingAlgorithm {
+class InsertionSort : public SortingAlgorithm {
 public:
   InsertionSort();
   void Sort (std::vector<int>& vec);
 };
 
-#endif //INSERTIONSORT_H
+#endif //INSERTION_SORT_H

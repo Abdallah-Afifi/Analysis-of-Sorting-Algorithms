@@ -2,6 +2,7 @@
 #include "SortingAlgorithm.h"
 #include <algorithm>
 #include <vector>
+#include <string>
 
 SelectionSort::SelectionSort() : SortingAlgorithm("Selection Sort") {}
 

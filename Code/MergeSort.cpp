@@ -1,5 +1,6 @@
 #include "MergeSort.h"
 #include <vector>
+#include <string>
 
 MergeSort::MergeSort() : SortingAlgorithm("Merge Sort") {}
 

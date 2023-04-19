@@ -2,6 +2,9 @@
 #define RANDOM_PERMUTATION_VECTOR_GENERATOR_H
 
 #include <vector>
+#include <string> 
+#include <random>
+#include <algorithm>
 
 class RandomPermutationVectorGenerator {
 public:

@@ -2,12 +2,14 @@
 #define SELECTION_SORT_H
 
 #include "SortingAlgorithm.h"
+#include <vector>
+#include <string>
 
 class SelectionSort : public SortingAlgorithm {
 public:
     SelectionSort();
 
-    void Sort(vector<int>& vec);
+    void Sort(std::vector<int>& vec);
 };
 
 #endif //SELECTION_SORT_H

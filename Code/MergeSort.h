@@ -3,6 +3,7 @@
 
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 class MergeSort : public SortingAlgorithm {
 public:
@@ -15,4 +16,4 @@ private:
     void Merge(std::vector<int>& vec, int left, int mid, int right);
 };
 
-#endif //MERGE+_SORT_H 
+#endif //MERGE_SORT_H 

@@ -1,6 +1,7 @@
 #include "SortTester.h"
 #include "SortingAlgorithm.h"
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <chrono>
 

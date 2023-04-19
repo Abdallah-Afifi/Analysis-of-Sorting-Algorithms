@@ -1,6 +1,7 @@
 #include "TreeSort.h"
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 TreeSort::TreeSort() : SortingAlgorithm("Tree Sort") {}
 

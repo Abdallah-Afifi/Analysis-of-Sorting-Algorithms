@@ -1,6 +1,7 @@
 #include "ShellSort.h"
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 ShellSort::ShellSort() : SortingAlgorithm("Shell Sort") {}
 

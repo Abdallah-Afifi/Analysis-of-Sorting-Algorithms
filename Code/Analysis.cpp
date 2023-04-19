@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <string>
 #include "BubbleSort.h"
 #include "CountingSort.h"
 #include "HeapSort.h"
@@ -12,7 +13,7 @@
 #include "SelectionSort.h"
 #include "ShellSort.h"
 #include "SortTester.h"
-#include "SortAlgorithm.h"
+#include "SortingAlgorithm.h"
 #include "TreeSort.h"
 
 int main() {
@@ -49,7 +50,7 @@ int main() {
             vectors.push_back(vecGenerator.GenerateVector(vectorSize));
         }
 
-        cout << endl << "Testing with array size " << vectorSize << ":" << endl;
+        std::cout << std::endl << "Testing with array size " << vectorSize << ":" << std::endl;
 
         // Test each sorting algorithm with its own generated vector
         for (int j = 0; j < sortingAlgorithms.size(); j++) {

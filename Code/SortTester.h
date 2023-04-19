@@ -2,6 +2,7 @@
 #define SORT_TESTER_H
 
 #include <vector>
+#include <string>
 #include "SortingAlgorithm.h"
 
 class SortTester {

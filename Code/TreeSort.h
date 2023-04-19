@@ -4,6 +4,7 @@
 
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 class TreeSort : public SortingAlgorithm {
 public:

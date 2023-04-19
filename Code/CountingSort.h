@@ -3,6 +3,7 @@
 
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
 
 class CountingSort : public SortingAlgorithm {
 public:

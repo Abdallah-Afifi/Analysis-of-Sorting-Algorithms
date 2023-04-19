@@ -1,6 +1,8 @@
 #include "CountingSort.h"
 #include "SortingAlgorithm.h"
 #include <vector>
+#include <string>
+#include <algorithm>
 
 
 CountingSort::CountingSort() : SortingAlgorithm("Counting Sort") {}
