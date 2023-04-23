@@ -11,6 +11,7 @@ public:
     TreeSort();
 
     void Sort(std::vector<int>& vec);
+    void Model(int size);
 
 private:
     struct Node {

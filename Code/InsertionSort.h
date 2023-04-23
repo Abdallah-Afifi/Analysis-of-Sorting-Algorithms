@@ -11,6 +11,7 @@ class InsertionSort : public SortingAlgorithm {
 public:
   InsertionSort();
   void Sort (std::vector<int>& vec);
+  void Model(int size);
 };
 
 #endif //INSERTION_SORT_H

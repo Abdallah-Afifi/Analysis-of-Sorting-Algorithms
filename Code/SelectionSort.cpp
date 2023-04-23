@@ -3,8 +3,15 @@
 #include <algorithm>
 #include <vector>
 #include <string>
+#include <cmath>
+
 
 SelectionSort::SelectionSort() : SortingAlgorithm("Selection Sort") {}
+
+void SelectionSort::Model(int size) {
+
+    model = std::pow(size, 2);
+}
 
 void SelectionSort::Sort(std::vector<int>& vec) {
     int size = vec.size();

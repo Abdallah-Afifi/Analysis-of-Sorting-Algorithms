@@ -1,10 +1,16 @@
 #include <vector>
 #include <string>
+#include <cmath>
 #include "SortingAlgorithm.h"
 #include "InsertionSort.h"
 
 
 InsertionSort::InsertionSort() : SortingAlgorithm ("Insertion Sort") {}
+
+void InsertionSort::Model(int size) {
+
+    model = std::pow(size, 2);
+}
 
 void InsertionSort::Sort(std::vector<int>& vec) {
  

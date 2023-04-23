@@ -5,6 +5,11 @@
 
 TreeSort::TreeSort() : SortingAlgorithm("Tree Sort") {}
 
+void TreeSort::Model(int size) {
+
+    model = (size * std::log2(size));
+}
+
 void TreeSort::Sort(std::vector<int>& vec) {
     Node* root = nullptr;
     for (int num : vec) {

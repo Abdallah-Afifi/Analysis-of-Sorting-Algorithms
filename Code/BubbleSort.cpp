@@ -2,8 +2,14 @@
 #include "SortingAlgorithm.h"
 #include <vector>
 #include <string>
+#include <cmath>
 
 BubbleSort::BubbleSort() : SortingAlgorithm("Bubble Sort") {}
+
+void BubbleSort::Model(int size) {
+
+    model = std::pow(size, 2);
+}
 
 void BubbleSort::Sort(std::vector<int>& vec) {
     int size = vec.size();

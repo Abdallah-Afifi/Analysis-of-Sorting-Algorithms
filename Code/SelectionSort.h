@@ -10,6 +10,7 @@ public:
     SelectionSort();
 
     void Sort(std::vector<int>& vec);
+    void Model(int size);
 };
 
 #endif //SELECTION_SORT_H

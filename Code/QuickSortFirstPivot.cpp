@@ -1,11 +1,17 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <cmath>
 #include "SortingAlgorithm.h"
 #include "QuickSortFirstPivot.h"
 
 
 QuickSortFirstPivot::QuickSortFirstPivot() : SortingAlgorithm ("Quick Sort First Pivot") {}
+
+void QuickSortFirstPivot::Model(int size) {
+
+    model = (size * std::log2(size));
+}
 
 void QuickSortFirstPivot::Sort(std::vector<int>& vec) {
   

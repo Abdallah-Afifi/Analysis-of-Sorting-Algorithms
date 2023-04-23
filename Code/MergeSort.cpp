@@ -1,8 +1,14 @@
 #include "MergeSort.h"
 #include <vector>
 #include <string>
+#include <cmath>
 
 MergeSort::MergeSort() : SortingAlgorithm("Merge Sort") {}
+
+void MergeSort::Model(int size) {
+
+    model = (size * std::log2(size));
+}
 
 void MergeSort::Sort(std::vector<int>& vec) {
     int size = vec.size();

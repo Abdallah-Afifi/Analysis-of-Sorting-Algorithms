@@ -6,6 +6,11 @@
 
 QuickSortMedianPivot::QuickSortMedianPivot() : SortingAlgorithm("Quick Sort Median Pivot") {}
 
+void QuickSortMedianPivot::Model(int size) {
+
+    model = (size * std::log2(size));
+}
+
 void QuickSortMedianPivot::Sort(std::vector<int>& vec) {
     int size = vec.size();
     QuickSortHelper(vec, 0, size - 1);

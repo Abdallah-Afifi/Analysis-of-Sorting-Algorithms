@@ -7,6 +7,11 @@
 
 QuickSortRandomPivot::QuickSortRandomPivot() : SortingAlgorithm("Quick Sort Random Pivot") {}
 
+void QuickSortRandomPivot::Model(int size) {
+
+    model = (size * std::log2(size));
+}
+
 QuickSortRandomPivot::~QuickSortRandomPivot() {}
 
 void QuickSortRandomPivot::Sort(std::vector<int>& vec) {

@@ -10,6 +10,7 @@ public:
     ShellSort();
 
     void Sort(std::vector<int>& vec);
+    void Model(int size);
 };
 
 #endif // SHELL_SORT_H

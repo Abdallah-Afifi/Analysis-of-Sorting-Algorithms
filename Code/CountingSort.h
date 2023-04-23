@@ -8,7 +8,8 @@
 class CountingSort : public SortingAlgorithm {
 public:
   CountingSort();
-  virtual void Sort(std::vector<int>& vec);
+  void Sort(std::vector<int>& vec);
+  void Model(int size);
 };
 
 #endif // COUNTING_SORT_H

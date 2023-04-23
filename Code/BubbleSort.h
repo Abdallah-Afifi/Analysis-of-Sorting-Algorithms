@@ -8,6 +8,7 @@ class BubbleSort : public SortingAlgorithm {
 public:
     BubbleSort();
     void Sort(std::vector<int>& vec);
+    void Model(int size);
 };
 
 #endif  //BUBBLE_SORT_H

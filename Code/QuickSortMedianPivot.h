@@ -10,6 +10,7 @@ public:
     QuickSortMedianPivot();
 
     void Sort(std::vector<int>& vec);
+    void Model(int size);
 
 private:
     void QuickSortHelper(std::vector<int>& vec, int left, int right);

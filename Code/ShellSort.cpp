@@ -2,8 +2,14 @@
 #include "SortingAlgorithm.h"
 #include <vector>
 #include <string>
+#include <cmath>
 
 ShellSort::ShellSort() : SortingAlgorithm("Shell Sort") {}
+
+void ShellSort::Model(int size) {
+
+    model = std::pow(size, 3 / 2);
+}
 
 void ShellSort::Sort(std::vector<int>& vec) {
     int size = vec.size();

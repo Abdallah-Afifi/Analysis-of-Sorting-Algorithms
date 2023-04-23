@@ -7,6 +7,11 @@
 
 CountingSort::CountingSort() : SortingAlgorithm("Counting Sort") {}
 
+void CountingSort::Model(int size) {
+
+    model = (size + size);
+}
+
 void CountingSort::Sort(std::vector<int>& vec) {
   int size = vec.size();
 
