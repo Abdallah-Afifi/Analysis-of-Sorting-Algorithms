@@ -2,6 +2,7 @@
 #include "SortingAlgorithm.h"
 #include <vector>
 #include <string>
+#include <cmath>
 
 TreeSort::TreeSort() : SortingAlgorithm("Tree Sort") {}
 

@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <cmath>
 
 QuickSortMedianPivot::QuickSortMedianPivot() : SortingAlgorithm("Quick Sort Median Pivot") {}
 

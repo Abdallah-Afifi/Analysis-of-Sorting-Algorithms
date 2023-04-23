@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <cmath>
 
 QuickSortRandomPivot::QuickSortRandomPivot() : SortingAlgorithm("Quick Sort Random Pivot") {}
 
