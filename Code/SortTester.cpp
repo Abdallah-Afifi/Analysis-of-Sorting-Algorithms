@@ -9,11 +9,13 @@
 void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size) {
     auto start_time = std::chrono::high_resolution_clock::now();
     algorithm->Sort(vec);
-    algorithm->Model(size);
     auto end_time = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double, std::milli> elapsed_time = end_time - start_time;
+
+    algorithm->Model(size);
     std::cout << algorithm->GetName();
+
         
     //checking if the vector is sorted before printing
     if (is_sorted(vec.begin(), vec.end())) {
