@@ -15,7 +15,7 @@ void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<i
 
     algorithm->Model(size);
    
-    std::cout<< GetEntropy() << " Vector's Entropy, "; 
+    std::cout<< GetEntropy(vec) << " Vector's Entropy, "; 
     std::cout << algorithm->GetName();
 
         
