@@ -14,6 +14,8 @@ void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<i
     std::chrono::duration<double, std::milli> elapsed_time = end_time - start_time;
 
     algorithm->Model(size);
+   
+    std::cout<< GetEntropy() << " Vector's Entropy, "; 
     std::cout << algorithm->GetName();
 
         
