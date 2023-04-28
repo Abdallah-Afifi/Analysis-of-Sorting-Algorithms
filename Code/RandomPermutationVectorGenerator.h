@@ -9,7 +9,7 @@
 class RandomPermutationVectorGenerator {
 public:
     static std::vector<int> GenerateVector(int size);
-    double GetEntropy(std::vector<int>& vec);
+    static double GetEntropy(std::vector<int>& vec);
 };
 
 

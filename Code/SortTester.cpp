@@ -1,5 +1,6 @@
 #include "SortTester.h"
 #include "SortingAlgorithm.h"
+#include "RandomPermutationVectorGenerator.h"
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -15,7 +16,7 @@ void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<i
 
     algorithm->Model(size);
    
-    std::cout<< GetEntropy(vec) << " Vector's Entropy, "; 
+    std::cout<< RandomPermutationVectorGenerator::GetEntropy(vec) << " Vector's Entropy, ";
     std::cout << algorithm->GetName();
 
         
