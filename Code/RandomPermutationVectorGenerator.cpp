@@ -17,7 +17,7 @@ std::vector<int> RandomPermutationVectorGenerator::GenerateVector(int size) {
 
 
 // Function to get the entropy of a vector.
-double GetEntropy(std::vector<int>& vec) {
+double RandomPermutationVectorGenerator::GetEntropy(std::vector<int>& vec) {
     // Get the size of the vector.
     int size = vec.size();
     // Create a vector to store the frequencies of each possible value.
