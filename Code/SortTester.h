@@ -7,7 +7,7 @@
 
 class SortTester {
 public:
-    static void TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size);
+    static void TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size, int j);
 };
 
 #endif // SORT_TESTER_H

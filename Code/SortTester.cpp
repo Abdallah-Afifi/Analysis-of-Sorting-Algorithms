@@ -9,7 +9,9 @@
 #include <iomanip>
 
 
-void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size) {
+
+
+void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<int>& vec, int size, int j) {
     auto start_time = std::chrono::high_resolution_clock::now();
     algorithm->Sort(vec);
     auto end_time = std::chrono::high_resolution_clock::now();
@@ -21,7 +23,8 @@ void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<i
     std::ofstream outputFile;
     outputFile.open("Output.txt", std::ios::app);
 
-    outputFile << std::left << algorithm->GetName() << std::endl;
+    outputFile << std::left << "[" << j << "] " <<  algorithm->GetName() << std::endl;
+
 
     outputFile << std::setw(5) << std::left << RandomPermutationVectorGenerator::GetEntropy(vec) << " Vector's Entropy, ";
 
@@ -43,3 +46,4 @@ void SortTester::TestSortingAlgorithm(SortingAlgorithm* algorithm, std::vector<i
 
     outputFile.close();
 }
+

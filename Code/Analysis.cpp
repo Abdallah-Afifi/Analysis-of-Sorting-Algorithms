@@ -17,6 +17,10 @@
 #include "SortingAlgorithm.h"
 #include "TreeSort.h"
 
+
+
+
+
 int main() {
     const int numTests = 10;
     int testSizes[numTests] = { 1000, 2000, 3000, 5000, 7000, 10000, 13000, 16000, 20000, 24000 };
@@ -60,7 +64,7 @@ int main() {
 
         // Test each sorting algorithm with its own generated vector
         for (int j = 0; j < sortingAlgorithms.size(); j++) {
-            sortTester.TestSortingAlgorithm(sortingAlgorithms[j], vectors[j], vectorSize);
+            sortTester.TestSortingAlgorithm(sortingAlgorithms[j], vectors[j], vectorSize, j+1);
         }
 
         outputFile.open("Output.txt", std::ios::app);

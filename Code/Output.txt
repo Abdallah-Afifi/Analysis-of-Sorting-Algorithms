@@ -1,370 +1,370 @@
 Testing with array size 1000:
 
-Selection Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 499500 Comparisons, 1000000 Model Expected, 999   Swaps, 1.5916 ms Elapsed
+[1] Selection Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 499500 Comparisons, 1000000 Model Expected, 999   Swaps, 1.4936 ms Elapsed
 
-Insertion Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 242274 Comparisons, 1000000 Model Expected, 242274 Swaps, 1.1668 ms Elapsed
+[2] Insertion Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 243472 Comparisons, 1000000 Model Expected, 243472 Swaps, 1.0407 ms Elapsed
 
-Merge Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 8695  Comparisons, 9965  Model Expected, 4341  Swaps, 0.5121 ms Elapsed
+[3] Merge Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 8689  Comparisons, 9965  Model Expected, 4276  Swaps, 0.4242 ms Elapsed
 
-Quick Sort First Pivot
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 10481 Comparisons, 9965  Model Expected, 6464  Swaps, 0.1118 ms Elapsed
+[4] Quick Sort First Pivot
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 10449 Comparisons, 9965  Model Expected, 7309  Swaps, 0.1353 ms Elapsed
 
-Quick Sort Random Pivot
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 11125 Comparisons, 9965  Model Expected, 6610  Swaps, 0.1448 ms Elapsed
+[5] Quick Sort Random Pivot
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 12379 Comparisons, 9965  Model Expected, 9399  Swaps, 0.1577 ms Elapsed
 
-Quick Sort Median Pivot
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 8903  Comparisons, 9965  Model Expected, 5590  Swaps, 0.251 ms Elapsed
+[6] Quick Sort Median Pivot
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 9459  Comparisons, 9965  Model Expected, 5979  Swaps, 0.1582 ms Elapsed
 
-Bubble Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 499500 Comparisons, 1000000 Model Expected, 252746 Swaps, 5.9157 ms Elapsed
+[7] Bubble Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 499500 Comparisons, 1000000 Model Expected, 244668 Swaps, 3.6288 ms Elapsed
 
-Counting Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 2000  Comparisons, 2000  Model Expected, 2000  Swaps, 0.0273 ms Elapsed
+[8] Counting Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 2000  Comparisons, 2000  Model Expected, 2000  Swaps, 0.0424 ms Elapsed
 
-Heap Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 19048 Comparisons, 9965  Model Expected, 9024  Swaps, 0.2556 ms Elapsed
+[9] Heap Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 19132 Comparisons, 9965  Model Expected, 9066  Swaps, 0.1992 ms Elapsed
 
-Tree Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 12263 Comparisons, 9965  Model Expected, 11263 Swaps, 0.3091 ms Elapsed
+[10] Tree Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 11408 Comparisons, 9965  Model Expected, 10408 Swaps, 0.2528 ms Elapsed
 
-Shell Sort
-9.96578 Vector's Entropy,  (Sorted) with size 1000 : 7787  Comparisons, 1000  Model Expected, 15793 Swaps, 0.1917 ms Elapsed
+[11] Shell Sort
+9.96578 Vector's Entropy,  (Sorted) with size 1000 : 7204  Comparisons, 1000  Model Expected, 15210 Swaps, 0.1632 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 2000:
 
-Selection Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 2498500 Comparisons, 4000000 Model Expected, 2998  Swaps, 5.6644 ms Elapsed
+[1] Selection Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 2498500 Comparisons, 4000000 Model Expected, 2998  Swaps, 5.9531 ms Elapsed
 
-Insertion Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 1251936 Comparisons, 4000000 Model Expected, 1251936 Swaps, 4.7711 ms Elapsed
+[2] Insertion Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 1234339 Comparisons, 4000000 Model Expected, 1234339 Swaps, 6.5145 ms Elapsed
 
-Merge Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 28108 Comparisons, 21931 Model Expected, 13950 Swaps, 0.8469 ms Elapsed
+[3] Merge Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 28061 Comparisons, 21931 Model Expected, 13908 Swaps, 1.4024 ms Elapsed
 
-Quick Sort First Pivot
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 35701 Comparisons, 21931 Model Expected, 21804 Swaps, 0.2856 ms Elapsed
+[4] Quick Sort First Pivot
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 33643 Comparisons, 21931 Model Expected, 21588 Swaps, 0.3445 ms Elapsed
 
-Quick Sort Random Pivot
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 34031 Comparisons, 21931 Model Expected, 22259 Swaps, 0.2943 ms Elapsed
+[5] Quick Sort Random Pivot
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 35531 Comparisons, 21931 Model Expected, 24042 Swaps, 0.3688 ms Elapsed
 
-Quick Sort Median Pivot
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 29248 Comparisons, 21931 Model Expected, 17787 Swaps, 0.2877 ms Elapsed
+[6] Quick Sort Median Pivot
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 31169 Comparisons, 21931 Model Expected, 19250 Swaps, 0.3934 ms Elapsed
 
-Bubble Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 2498500 Comparisons, 4000000 Model Expected, 1270736 Swaps, 13.1141 ms Elapsed
+[7] Bubble Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 2498500 Comparisons, 4000000 Model Expected, 1253927 Swaps, 12.831 ms Elapsed
 
-Counting Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 6000  Comparisons, 4000  Model Expected, 6000  Swaps, 0.0952 ms Elapsed
+[8] Counting Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 6000  Comparisons, 4000  Model Expected, 6000  Swaps, 0.0838 ms Elapsed
 
-Heap Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 61360 Comparisons, 21931 Model Expected, 29180 Swaps, 0.3962 ms Elapsed
+[9] Heap Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 61494 Comparisons, 21931 Model Expected, 29247 Swaps, 0.3705 ms Elapsed
 
-Tree Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 39496 Comparisons, 21931 Model Expected, 36496 Swaps, 0.4301 ms Elapsed
+[10] Tree Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 38530 Comparisons, 21931 Model Expected, 35530 Swaps, 0.3817 ms Elapsed
 
-Shell Sort
-10.9658 Vector's Entropy,  (Sorted) with size 2000 : 27418 Comparisons, 2000  Model Expected, 53430 Swaps, 0.3401 ms Elapsed
+[11] Shell Sort
+10.9658 Vector's Entropy,  (Sorted) with size 2000 : 25153 Comparisons, 2000  Model Expected, 51165 Swaps, 0.325 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 3000:
 
-Selection Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 6997000 Comparisons, 9000000 Model Expected, 5997  Swaps, 12.7684 ms Elapsed
+[1] Selection Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 6997000 Comparisons, 9000000 Model Expected, 5997  Swaps, 12.4834 ms Elapsed
 
-Insertion Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 3472931 Comparisons, 9000000 Model Expected, 3472931 Swaps, 10.0975 ms Elapsed
+[2] Insertion Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 3476368 Comparisons, 9000000 Model Expected, 3476368 Swaps, 11.371 ms Elapsed
 
-Merge Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 59010 Comparisons, 34652 Model Expected, 29131 Swaps, 2.2357 ms Elapsed
+[3] Merge Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 58967 Comparisons, 34652 Model Expected, 29130 Swaps, 2.0521 ms Elapsed
 
-Quick Sort First Pivot
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 73592 Comparisons, 34652 Model Expected, 44770 Swaps, 0.7189 ms Elapsed
+[4] Quick Sort First Pivot
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 74060 Comparisons, 34652 Model Expected, 45394 Swaps, 0.4138 ms Elapsed
 
-Quick Sort Random Pivot
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 74251 Comparisons, 34652 Model Expected, 46035 Swaps, 0.7664 ms Elapsed
+[5] Quick Sort Random Pivot
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 76755 Comparisons, 34652 Model Expected, 48281 Swaps, 0.4032 ms Elapsed
 
-Quick Sort Median Pivot
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 60934 Comparisons, 34652 Model Expected, 36803 Swaps, 0.5927 ms Elapsed
+[6] Quick Sort Median Pivot
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 65943 Comparisons, 34652 Model Expected, 38321 Swaps, 0.3693 ms Elapsed
 
-Bubble Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 6997000 Comparisons, 9000000 Model Expected, 3494308 Swaps, 34.6038 ms Elapsed
+[7] Bubble Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 6997000 Comparisons, 9000000 Model Expected, 3540496 Swaps, 30.7807 ms Elapsed
 
-Counting Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 12000 Comparisons, 6000  Model Expected, 12000 Swaps, 0.1728 ms Elapsed
+[8] Counting Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 12000 Comparisons, 6000  Model Expected, 12000 Swaps, 0.1471 ms Elapsed
 
-Heap Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 128416 Comparisons, 34652 Model Expected, 61208 Swaps, 0.9001 ms Elapsed
+[9] Heap Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 128474 Comparisons, 34652 Model Expected, 61237 Swaps, 0.6138 ms Elapsed
 
-Tree Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 82318 Comparisons, 34652 Model Expected, 76318 Swaps, 0.6394 ms Elapsed
+[10] Tree Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 82909 Comparisons, 34652 Model Expected, 76909 Swaps, 0.5618 ms Elapsed
 
-Shell Sort
-11.5507 Vector's Entropy,  (Sorted) with size 3000 : 56113 Comparisons, 3000  Model Expected, 112132 Swaps, 0.889 ms Elapsed
+[11] Shell Sort
+11.5507 Vector's Entropy,  (Sorted) with size 3000 : 54315 Comparisons, 3000  Model Expected, 110334 Swaps, 0.5106 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 5000:
 
-Selection Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 19494500 Comparisons, 25000000 Model Expected, 10996 Swaps, 37.5608 ms Elapsed
+[1] Selection Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 19494500 Comparisons, 25000000 Model Expected, 10996 Swaps, 37.8634 ms Elapsed
 
-Insertion Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 9700123 Comparisons, 25000000 Model Expected, 9700123 Swaps, 32.4594 ms Elapsed
+[2] Insertion Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 9662996 Comparisons, 25000000 Model Expected, 9662996 Swaps, 28.8667 ms Elapsed
 
-Merge Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 114273 Comparisons, 61438 Model Expected, 56236 Swaps, 1.8635 ms Elapsed
+[3] Merge Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 114213 Comparisons, 61438 Model Expected, 56156 Swaps, 1.9264 ms Elapsed
 
-Quick Sort First Pivot
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 142056 Comparisons, 61438 Model Expected, 85539 Swaps, 0.6373 ms Elapsed
+[4] Quick Sort First Pivot
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 146473 Comparisons, 61438 Model Expected, 90293 Swaps, 0.6537 ms Elapsed
 
-Quick Sort Random Pivot
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 146216 Comparisons, 61438 Model Expected, 90878 Swaps, 0.6502 ms Elapsed
+[5] Quick Sort Random Pivot
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 144761 Comparisons, 61438 Model Expected, 87049 Swaps, 0.6132 ms Elapsed
 
-Quick Sort Median Pivot
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 119421 Comparisons, 61438 Model Expected, 72423 Swaps, 0.6145 ms Elapsed
+[6] Quick Sort Median Pivot
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 126046 Comparisons, 61438 Model Expected, 75476 Swaps, 0.6306 ms Elapsed
 
-Bubble Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 19494500 Comparisons, 25000000 Model Expected, 9785016 Swaps, 93.3433 ms Elapsed
+[7] Bubble Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 19494500 Comparisons, 25000000 Model Expected, 9817352 Swaps, 94.6467 ms Elapsed
 
-Counting Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 22000 Comparisons, 10000 Model Expected, 22000 Swaps, 0.6558 ms Elapsed
+[8] Counting Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 22000 Comparisons, 10000 Model Expected, 22000 Swaps, 0.3264 ms Elapsed
 
-Heap Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 247268 Comparisons, 61438 Model Expected, 118134 Swaps, 3.6785 ms Elapsed
+[9] Heap Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 247576 Comparisons, 61438 Model Expected, 118288 Swaps, 1.4723 ms Elapsed
 
-Tree Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 161280 Comparisons, 61438 Model Expected, 150280 Swaps, 4.0186 ms Elapsed
+[10] Tree Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 153001 Comparisons, 61438 Model Expected, 142001 Swaps, 1.2475 ms Elapsed
 
-Shell Sort
-12.2877 Vector's Entropy,  (Sorted) with size 5000 : 115663 Comparisons, 5000  Model Expected, 226687 Swaps, 2.2393 ms Elapsed
+[11] Shell Sort
+12.2877 Vector's Entropy,  (Sorted) with size 5000 : 118259 Comparisons, 5000  Model Expected, 229283 Swaps, 1.5106 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 7000:
 
-Selection Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 43991000 Comparisons, 49000000 Model Expected, 17995 Swaps, 67.807 ms Elapsed
+[1] Selection Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 43991000 Comparisons, 49000000 Model Expected, 17995 Swaps, 75.4978 ms Elapsed
 
-Insertion Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 21780683 Comparisons, 49000000 Model Expected, 21780683 Swaps, 65.455 ms Elapsed
+[2] Insertion Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 21940194 Comparisons, 49000000 Model Expected, 21940194 Swaps, 56.2716 ms Elapsed
 
-Merge Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 194943 Comparisons, 89411 Model Expected, 95885 Swaps, 2.8372 ms Elapsed
+[3] Merge Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 194909 Comparisons, 89411 Model Expected, 95795 Swaps, 2.6752 ms Elapsed
 
-Quick Sort First Pivot
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 252959 Comparisons, 89411 Model Expected, 149055 Swaps, 0.9145 ms Elapsed
+[4] Quick Sort First Pivot
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 248813 Comparisons, 89411 Model Expected, 150579 Swaps, 0.9268 ms Elapsed
 
-Quick Sort Random Pivot
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 256883 Comparisons, 89411 Model Expected, 156179 Swaps, 0.9937 ms Elapsed
+[5] Quick Sort Random Pivot
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 266833 Comparisons, 89411 Model Expected, 162608 Swaps, 1.0061 ms Elapsed
 
-Quick Sort Median Pivot
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 209423 Comparisons, 89411 Model Expected, 122917 Swaps, 0.9123 ms Elapsed
+[6] Quick Sort Median Pivot
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 213602 Comparisons, 89411 Model Expected, 123702 Swaps, 0.8556 ms Elapsed
 
-Bubble Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 43991000 Comparisons, 49000000 Model Expected, 22045898 Swaps, 198.603 ms Elapsed
+[7] Bubble Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 43991000 Comparisons, 49000000 Model Expected, 22047586 Swaps, 212.63 ms Elapsed
 
-Counting Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 36000 Comparisons, 14000 Model Expected, 36000 Swaps, 0.301 ms Elapsed
+[8] Counting Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 36000 Comparisons, 14000 Model Expected, 36000 Swaps, 0.3378 ms Elapsed
 
-Heap Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 420788 Comparisons, 89411 Model Expected, 201394 Swaps, 1.5513 ms Elapsed
+[9] Heap Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 421318 Comparisons, 89411 Model Expected, 201659 Swaps, 1.4928 ms Elapsed
 
-Tree Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 271411 Comparisons, 89411 Model Expected, 253411 Swaps, 3.1116 ms Elapsed
+[10] Tree Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 260076 Comparisons, 89411 Model Expected, 242076 Swaps, 1.4157 ms Elapsed
 
-Shell Sort
-12.7731 Vector's Entropy,  (Sorted) with size 7000 : 203463 Comparisons, 7000  Model Expected, 391494 Swaps, 2.0375 ms Elapsed
+[11] Shell Sort
+12.7731 Vector's Entropy,  (Sorted) with size 7000 : 208913 Comparisons, 7000  Model Expected, 396944 Swaps, 1.3606 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 10000:
 
-Selection Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 93986000 Comparisons, 100000000 Model Expected, 27994 Swaps, 155.077 ms Elapsed
+[1] Selection Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 93986000 Comparisons, 100000000 Model Expected, 27994 Swaps, 162.577 ms Elapsed
 
-Insertion Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 46570665 Comparisons, 100000000 Model Expected, 46570665 Swaps, 128.792 ms Elapsed
+[2] Insertion Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 46851665 Comparisons, 100000000 Model Expected, 46851665 Swaps, 123.302 ms Elapsed
 
-Merge Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 315340 Comparisons, 132877 Model Expected, 155086 Swaps, 4.0108 ms Elapsed
+[3] Merge Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 315305 Comparisons, 132877 Model Expected, 155004 Swaps, 6.6436 ms Elapsed
 
-Quick Sort First Pivot
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 405067 Comparisons, 132877 Model Expected, 235621 Swaps, 1.4204 ms Elapsed
+[4] Quick Sort First Pivot
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 409103 Comparisons, 132877 Model Expected, 247420 Swaps, 2.5085 ms Elapsed
 
-Quick Sort Random Pivot
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 419369 Comparisons, 132877 Model Expected, 238894 Swaps, 1.5598 ms Elapsed
+[5] Quick Sort Random Pivot
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 428631 Comparisons, 132877 Model Expected, 259516 Swaps, 3.6759 ms Elapsed
 
-Quick Sort Median Pivot
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 339354 Comparisons, 132877 Model Expected, 195920 Swaps, 1.4329 ms Elapsed
+[6] Quick Sort Median Pivot
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 345795 Comparisons, 132877 Model Expected, 199714 Swaps, 2.3926 ms Elapsed
 
-Bubble Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 93986000 Comparisons, 100000000 Model Expected, 46884805 Swaps, 441.309 ms Elapsed
+[7] Bubble Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 93986000 Comparisons, 100000000 Model Expected, 47337340 Swaps, 434.888 ms Elapsed
 
-Counting Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 56000 Comparisons, 20000 Model Expected, 56000 Swaps, 0.2909 ms Elapsed
+[8] Counting Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 56000 Comparisons, 20000 Model Expected, 56000 Swaps, 0.8215 ms Elapsed
 
-Heap Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 679406 Comparisons, 132877 Model Expected, 325703 Swaps, 3.2565 ms Elapsed
+[9] Heap Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 679554 Comparisons, 132877 Model Expected, 325777 Swaps, 5.4048 ms Elapsed
 
-Tree Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 432214 Comparisons, 132877 Model Expected, 404214 Swaps, 3.2529 ms Elapsed
+[10] Tree Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 429153 Comparisons, 132877 Model Expected, 401153 Swaps, 3.5798 ms Elapsed
 
-Shell Sort
-13.2877 Vector's Entropy,  (Sorted) with size 10000: 358000 Comparisons, 10000 Model Expected, 666036 Swaps, 2.1529 ms Elapsed
+[11] Shell Sort
+13.2877 Vector's Entropy,  (Sorted) with size 10000: 356816 Comparisons, 10000 Model Expected, 664852 Swaps, 2.5193 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 13000:
 
-Selection Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 178479500 Comparisons, 169000000 Model Expected, 40993 Swaps, 253.658 ms Elapsed
+[1] Selection Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 178479500 Comparisons, 169000000 Model Expected, 40993 Swaps, 260.826 ms Elapsed
 
-Insertion Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 88501463 Comparisons, 169000000 Model Expected, 88501463 Swaps, 214.677 ms Elapsed
+[2] Insertion Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 89092497 Comparisons, 169000000 Model Expected, 89092497 Swaps, 229.033 ms Elapsed
 
-Merge Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 476945 Comparisons, 177660 Model Expected, 234580 Swaps, 10.0189 ms Elapsed
+[3] Merge Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 476799 Comparisons, 177660 Model Expected, 234363 Swaps, 8.2548 ms Elapsed
 
-Quick Sort First Pivot
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 630210 Comparisons, 177660 Model Expected, 364264 Swaps, 3.2681 ms Elapsed
+[4] Quick Sort First Pivot
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 607747 Comparisons, 177660 Model Expected, 358702 Swaps, 2.8   ms Elapsed
 
-Quick Sort Random Pivot
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 631417 Comparisons, 177660 Model Expected, 368667 Swaps, 3.2253 ms Elapsed
+[5] Quick Sort Random Pivot
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 632611 Comparisons, 177660 Model Expected, 384141 Swaps, 2.0115 ms Elapsed
 
-Quick Sort Median Pivot
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 516343 Comparisons, 177660 Model Expected, 299085 Swaps, 2.0696 ms Elapsed
+[6] Quick Sort Median Pivot
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 522607 Comparisons, 177660 Model Expected, 305775 Swaps, 1.8524 ms Elapsed
 
-Bubble Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 178479500 Comparisons, 169000000 Model Expected, 88989669 Swaps, 710.703 ms Elapsed
+[7] Bubble Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 178479500 Comparisons, 169000000 Model Expected, 89275285 Swaps, 749.23 ms Elapsed
 
-Counting Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 82000 Comparisons, 26000 Model Expected, 82000 Swaps, 0.5854 ms Elapsed
+[8] Counting Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 82000 Comparisons, 26000 Model Expected, 82000 Swaps, 0.9878 ms Elapsed
 
-Heap Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 1025030 Comparisons, 177660 Model Expected, 492015 Swaps, 7.1351 ms Elapsed
+[9] Heap Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 1025430 Comparisons, 177660 Model Expected, 492215 Swaps, 4.7444 ms Elapsed
 
-Tree Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 659370 Comparisons, 177660 Model Expected, 618370 Swaps, 7.1716 ms Elapsed
+[10] Tree Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 662327 Comparisons, 177660 Model Expected, 621327 Swaps, 4.631 ms Elapsed
 
-Shell Sort
-13.6662 Vector's Entropy,  (Sorted) with size 13000: 565398 Comparisons, 13000 Model Expected, 1029440 Swaps, 3.8448 ms Elapsed
+[11] Shell Sort
+13.6662 Vector's Entropy,  (Sorted) with size 13000: 560101 Comparisons, 13000 Model Expected, 1024143 Swaps, 3.2415 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 16000:
 
-Selection Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 306471500 Comparisons, 256000000 Model Expected, 56992 Swaps, 386.823 ms Elapsed
+[1] Selection Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 306471500 Comparisons, 256000000 Model Expected, 56992 Swaps, 407.038 ms Elapsed
 
-Insertion Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 152875751 Comparisons, 256000000 Model Expected, 152875751 Swaps, 342.708 ms Elapsed
+[2] Insertion Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 152542101 Comparisons, 256000000 Model Expected, 152542101 Swaps, 311.774 ms Elapsed
 
-Merge Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 680197 Comparisons, 223452 Model Expected, 335681 Swaps, 6.4376 ms Elapsed
+[3] Merge Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 680055 Comparisons, 223452 Model Expected, 335328 Swaps, 8.6436 ms Elapsed
 
-Quick Sort First Pivot
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 892796 Comparisons, 223452 Model Expected, 515721 Swaps, 2.319 ms Elapsed
+[4] Quick Sort First Pivot
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 867934 Comparisons, 223452 Model Expected, 512259 Swaps, 2.3126 ms Elapsed
 
-Quick Sort Random Pivot
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 891283 Comparisons, 223452 Model Expected, 524192 Swaps, 2.4311 ms Elapsed
+[5] Quick Sort Random Pivot
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 897033 Comparisons, 223452 Model Expected, 532790 Swaps, 2.3688 ms Elapsed
 
-Quick Sort Median Pivot
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 745441 Comparisons, 223452 Model Expected, 431067 Swaps, 2.3709 ms Elapsed
+[6] Quick Sort Median Pivot
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 759558 Comparisons, 223452 Model Expected, 451409 Swaps, 2.3037 ms Elapsed
 
-Bubble Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 306471500 Comparisons, 256000000 Model Expected, 152675716 Swaps, 1105.46 ms Elapsed
+[7] Bubble Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 306471500 Comparisons, 256000000 Model Expected, 152742976 Swaps, 1121.98 ms Elapsed
 
-Counting Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 114000 Comparisons, 32000 Model Expected, 114000 Swaps, 0.6614 ms Elapsed
+[8] Counting Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 114000 Comparisons, 32000 Model Expected, 114000 Swaps, 0.5549 ms Elapsed
 
-Heap Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 1459396 Comparisons, 223452 Model Expected, 701198 Swaps, 5.8252 ms Elapsed
+[9] Heap Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 1460012 Comparisons, 223452 Model Expected, 701506 Swaps, 4.1227 ms Elapsed
 
-Tree Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 942004 Comparisons, 223452 Model Expected, 885004 Swaps, 3.5769 ms Elapsed
+[10] Tree Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 952907 Comparisons, 223452 Model Expected, 895907 Swaps, 3.4806 ms Elapsed
 
-Shell Sort
-13.9658 Vector's Entropy,  (Sorted) with size 16000: 867400 Comparisons, 16000 Model Expected, 1523448 Swaps, 4.309 ms Elapsed
+[11] Shell Sort
+13.9658 Vector's Entropy,  (Sorted) with size 16000: 869033 Comparisons, 16000 Model Expected, 1525081 Swaps, 3.8984 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 20000:
 
-Selection Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 506461500 Comparisons, 400000000 Model Expected, 76991 Swaps, 632.169 ms Elapsed
+[1] Selection Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 506461500 Comparisons, 400000000 Model Expected, 76991 Swaps, 626.044 ms Elapsed
 
-Insertion Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 253872431 Comparisons, 400000000 Model Expected, 253872431 Swaps, 513.643 ms Elapsed
+[2] Insertion Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 252866289 Comparisons, 400000000 Model Expected, 252866289 Swaps, 494.588 ms Elapsed
 
-Merge Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 941258 Comparisons, 285754 Model Expected, 463915 Swaps, 9.5156 ms Elapsed
+[3] Merge Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 940985 Comparisons, 285754 Model Expected, 463612 Swaps, 8.3298 ms Elapsed
 
-Quick Sort First Pivot
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 1234667 Comparisons, 285754 Model Expected, 718623 Swaps, 3.0244 ms Elapsed
+[4] Quick Sort First Pivot
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 1201408 Comparisons, 285754 Model Expected, 705877 Swaps, 2.8618 ms Elapsed
 
-Quick Sort Random Pivot
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 1225168 Comparisons, 285754 Model Expected, 727069 Swaps, 4.6228 ms Elapsed
+[5] Quick Sort Random Pivot
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 1224946 Comparisons, 285754 Model Expected, 727133 Swaps, 3.0693 ms Elapsed
 
-Quick Sort Median Pivot
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 1030918 Comparisons, 285754 Model Expected, 597253 Swaps, 4.5234 ms Elapsed
+[6] Quick Sort Median Pivot
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 1043569 Comparisons, 285754 Model Expected, 622726 Swaps, 3.1036 ms Elapsed
 
-Bubble Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 506461500 Comparisons, 400000000 Model Expected, 252664584 Swaps, 1779.3 ms Elapsed
+[7] Bubble Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 506461500 Comparisons, 400000000 Model Expected, 253290479 Swaps, 1770.76 ms Elapsed
 
-Counting Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 154000 Comparisons, 40000 Model Expected, 154000 Swaps, 2.0448 ms Elapsed
+[8] Counting Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 154000 Comparisons, 40000 Model Expected, 154000 Swaps, 1.5259 ms Elapsed
 
-Heap Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 2016236 Comparisons, 285754 Model Expected, 969618 Swaps, 5.2369 ms Elapsed
+[9] Heap Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 2016426 Comparisons, 285754 Model Expected, 969713 Swaps, 7.5844 ms Elapsed
 
-Tree Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 1279346 Comparisons, 285754 Model Expected, 1202346 Swaps, 4.6162 ms Elapsed
+[10] Tree Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 1305575 Comparisons, 285754 Model Expected, 1228575 Swaps, 6.7625 ms Elapsed
 
-Shell Sort
-14.2877 Vector's Entropy,  (Sorted) with size 20000: 1211247 Comparisons, 20000 Model Expected, 2127300 Swaps, 5.5959 ms Elapsed
+[11] Shell Sort
+14.2877 Vector's Entropy,  (Sorted) with size 20000: 1220140 Comparisons, 20000 Model Expected, 2136193 Swaps, 6.9682 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Testing with array size 24000:
 
-Selection Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 794449500 Comparisons, 576000000 Model Expected, 100990 Swaps, 866.887 ms Elapsed
+[1] Selection Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 794449500 Comparisons, 576000000 Model Expected, 100990 Swaps, 919.018 ms Elapsed
 
-Insertion Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 398004461 Comparisons, 576000000 Model Expected, 398004461 Swaps, 738.467 ms Elapsed
+[2] Insertion Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 397483576 Comparisons, 576000000 Model Expected, 397483576 Swaps, 744.271 ms Elapsed
 
-Merge Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 1260694 Comparisons, 349217 Model Expected, 621638 Swaps, 9.6115 ms Elapsed
+[3] Merge Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 1260320 Comparisons, 349217 Model Expected, 621097 Swaps, 13.361 ms Elapsed
 
-Quick Sort First Pivot
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 1661511 Comparisons, 349217 Model Expected, 968507 Swaps, 4.8394 ms Elapsed
+[4] Quick Sort First Pivot
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 1599867 Comparisons, 349217 Model Expected, 940461 Swaps, 3.7   ms Elapsed
 
-Quick Sort Random Pivot
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 1624394 Comparisons, 349217 Model Expected, 960175 Swaps, 6.0542 ms Elapsed
+[5] Quick Sort Random Pivot
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 1660493 Comparisons, 349217 Model Expected, 969140 Swaps, 5.2565 ms Elapsed
 
-Quick Sort Median Pivot
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 1380093 Comparisons, 349217 Model Expected, 801717 Swaps, 3.5538 ms Elapsed
+[6] Quick Sort Median Pivot
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 1381171 Comparisons, 349217 Model Expected, 818787 Swaps, 5.8796 ms Elapsed
 
-Bubble Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 794449500 Comparisons, 576000000 Model Expected, 396310051 Swaps, 2574.32 ms Elapsed
+[7] Bubble Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 794449500 Comparisons, 576000000 Model Expected, 397929768 Swaps, 2526.87 ms Elapsed
 
-Counting Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 202000 Comparisons, 48000 Model Expected, 202000 Swaps, 0.7559 ms Elapsed
+[8] Counting Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 202000 Comparisons, 48000 Model Expected, 202000 Swaps, 0.7031 ms Elapsed
 
-Heap Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 2697426 Comparisons, 349217 Model Expected, 1298213 Swaps, 13.2932 ms Elapsed
+[9] Heap Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 2697640 Comparisons, 349217 Model Expected, 1298320 Swaps, 8.3393 ms Elapsed
 
-Tree Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 1713914 Comparisons, 349217 Model Expected, 1612914 Swaps, 6.6203 ms Elapsed
+[10] Tree Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 1756363 Comparisons, 349217 Model Expected, 1655363 Swaps, 5.645 ms Elapsed
 
-Shell Sort
-14.5507 Vector's Entropy,  (Sorted) with size 24000: 1666036 Comparisons, 24000 Model Expected, 2894096 Swaps, 5.796 ms Elapsed
+[11] Shell Sort
+14.5507 Vector's Entropy,  (Sorted) with size 24000: 1652266 Comparisons, 24000 Model Expected, 2880326 Swaps, 5.8799 ms Elapsed
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
