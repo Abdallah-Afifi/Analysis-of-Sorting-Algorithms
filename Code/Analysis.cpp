@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "BubbleSort.h"
 #include "CountingSort.h"
 #include "HeapSort.h"
@@ -18,7 +19,7 @@
 
 int main() {
     const int numTests = 10;
-    int testSizes[numTests] = {1000, 2000, 3000, 5000, 7000, 10000, 13000, 16000, 20000, 24000};
+    int testSizes[numTests] = { 1000, 2000, 3000, 5000, 7000, 10000, 13000, 16000, 20000, 24000 };
 
     // Create instances of sorting algorithms to be tested
     std::vector<SortingAlgorithm*> sortingAlgorithms;
@@ -32,11 +33,11 @@ int main() {
     sortingAlgorithms.push_back(new CountingSort());
     sortingAlgorithms.push_back(new HeapSort());
     sortingAlgorithms.push_back(new TreeSort());
-    sortingAlgorithms.push_back(new ShellSort()); 
-    
+    sortingAlgorithms.push_back(new ShellSort());
+
     // Create instance of array generator
     RandomPermutationVectorGenerator vecGenerator;
-    
+
     // Create instance of sort tester
     SortTester sortTester;
 
@@ -50,12 +51,23 @@ int main() {
             vectors.push_back(vecGenerator.GenerateVector(vectorSize));
         }
 
-        std::cout << std::endl << "Testing with array size " << vectorSize << ":" << std::endl;
+        std::ofstream outputFile;
+        outputFile.open("Output.txt", std::ios::app);
+
+        outputFile << "Testing with array size " << vectorSize << ":" << std::endl << std::endl;
+
+        outputFile.close();
 
         // Test each sorting algorithm with its own generated vector
         for (int j = 0; j < sortingAlgorithms.size(); j++) {
             sortTester.TestSortingAlgorithm(sortingAlgorithms[j], vectors[j], vectorSize);
         }
+
+        outputFile.open("Output.txt", std::ios::app);
+
+        outputFile << "------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::endl << std::endl;
+
+        outputFile.close();
     }
 
     // Free allocated memory
@@ -63,6 +75,7 @@ int main() {
         delete sortingAlgorithms[i];
     }
 
+    std::cout << std::endl << "The Analysis program worked successfully" << std::endl << "You can find the output of the program in the file Output.txt" << std::endl;
+
     return 0;
 }
-
